@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>EuclidEx</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>toolbox.builder.TLAParserBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>toolbox.natures.TLANature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>EuclidEx.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/EuclidEx.tla</locationURI>
+		</link>
+		<link>
+			<name>FiniteSets.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/FiniteSets.tla</location>
+		</link>
+		<link>
+			<name>GCD.tla</name>
+			<type>1</type>
+			<location>/home/hengxin/git-projects/tlaps-examples/Euclid/Euclid-Hyperbook/GCD.tla</location>
+		</link>
+		<link>
+			<name>NaturalsInduction.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/NaturalsInduction.tla</location>
+		</link>
+		<link>
+			<name>TLAPS.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/TLAPS.tla</location>
+		</link>
+	</linkedResources>
+</projectDescription>

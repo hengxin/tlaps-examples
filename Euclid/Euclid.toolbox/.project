@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Euclid</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>toolbox.builder.TLAParserBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>toolbox.natures.TLANature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Euclid.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Euclid.tla</locationURI>
+		</link>
+		<link>
+			<name>TLAPS.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/TLAPS.tla</location>
+		</link>
+	</linkedResources>
+</projectDescription>
