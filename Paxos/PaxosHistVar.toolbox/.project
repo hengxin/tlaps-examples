@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>PaxosHistVar</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>toolbox.builder.TLAParserBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>toolbox.natures.TLANature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>NaturalsInduction.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/NaturalsInduction.tla</location>
+		</link>
+		<link>
+			<name>PaxosHistVar.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PaxosHistVar.tla</locationURI>
+		</link>
+		<link>
+			<name>TLAPS.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/TLAPS.tla</location>
+		</link>
+	</linkedResources>
+</projectDescription>

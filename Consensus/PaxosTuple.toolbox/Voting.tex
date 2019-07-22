@@ -1035,234 +1035,254 @@
  \@x{\makebox[0pt][r]{\scriptsize 56\hspace{1em}} ChosenAt ( b ,\, v )
  \.{\defeq}}%
  \@x{\makebox[0pt][r]{\scriptsize 57\hspace{1em}}\@s{16.4} \E\, Q \.{\in}
- Quorum \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 58\hspace{1em}}\@s{27.72} \A\, a\@s{18.64}
- \.{\in} Q \.{:} VotedFor ( a ,\, b ,\, v )}%
+ Quorum \.{:} \A\, a \.{\in} Q \.{:} VotedFor ( a ,\, b ,\, v )}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 60\hspace{1em}} chosen \.{\defeq} \{ v
+ \@x{\makebox[0pt][r]{\scriptsize 59\hspace{1em}} chosen \.{\defeq} \{ v
  \.{\in} Value \.{:} \E\, b \.{\in} Ballot \.{:} ChosenAt ( b ,\, v ) \}}%
-\@x{\makebox[0pt][r]{\scriptsize 61\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 62\hspace{1em}} CannotVoteAt ( a ,\, b )
+\@x{\makebox[0pt][r]{\scriptsize 60\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 61\hspace{1em}} CannotVoteAt ( a ,\, b )
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 63\hspace{1em}}\@s{16.4} \.{\land} maxBal [
+ \@x{\makebox[0pt][r]{\scriptsize 62\hspace{1em}}\@s{16.4} \.{\land} maxBal [
  a ] \.{>} b}%
- \@x{\makebox[0pt][r]{\scriptsize 64\hspace{1em}}\@s{16.4} \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 63\hspace{1em}}\@s{16.4} \.{\land}
  DidNotVoteAt ( a ,\, b )}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 66\hspace{1em}} NoneOtherChoosableAt ( b ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 65\hspace{1em}} NoneOtherChoosableAt ( b ,\,
  v ) \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 67\hspace{1em}}\@s{16.4} \E\, Q \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 66\hspace{1em}}\@s{16.4} \E\, Q \.{\in}
  Quorum \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 68\hspace{1em}}\@s{27.72} \A\, a \.{\in} Q
+ \@x{\makebox[0pt][r]{\scriptsize 67\hspace{1em}}\@s{27.72} \A\, a \.{\in} Q
  \.{:} VotedFor ( a ,\, b ,\, v ) \.{\lor} CannotVoteAt ( a ,\, b )}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 70\hspace{1em}} SafeAt ( b ,\, v )
+ \@x{\makebox[0pt][r]{\scriptsize 69\hspace{1em}} SafeAt ( b ,\, v )
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 71\hspace{1em}}\@s{16.4} \A\, c \.{\in} 0
- \.{\dotdot} ( b \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 72\hspace{1em}}\@s{27.72}
- NoneOtherChoosableAt ( c ,\, v )}%
+ \@x{\makebox[0pt][r]{\scriptsize 70\hspace{1em}}\@s{16.4} \A\, c \.{\in} 0
+ \.{\dotdot} ( b \.{-} 1 ) \.{:} NoneOtherChoosableAt ( c ,\, v )}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 74\hspace{1em}} VotesSafe \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 75\hspace{1em}}\@s{16.4} \A\, a \.{\in}
+\@x{\makebox[0pt][r]{\scriptsize 72\hspace{1em}} VotesSafe \.{\defeq}}%
+ \@x{\makebox[0pt][r]{\scriptsize 73\hspace{1em}}\@s{16.4} \A\, a \.{\in}
  Acceptor ,\, b \.{\in} Ballot ,\, v \.{\in} Value \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 76\hspace{1em}}\@s{27.72} VotedFor ( a ,\, b
+ \@x{\makebox[0pt][r]{\scriptsize 74\hspace{1em}}\@s{27.72} VotedFor ( a ,\, b
  ,\, v ) \.{\implies} SafeAt ( b ,\, v )}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 78\hspace{1em}} OneVote \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 79\hspace{1em}}\@s{16.4} \A\, a \.{\in}
+\@x{\makebox[0pt][r]{\scriptsize 76\hspace{1em}} OneVote \.{\defeq}}%
+ \@x{\makebox[0pt][r]{\scriptsize 77\hspace{1em}}\@s{16.4} \A\, a \.{\in}
  Acceptor ,\, b \.{\in} Ballot ,\, v ,\, w \.{\in} Value \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 80\hspace{1em}}\@s{27.72} VotedFor ( a ,\, b
+ \@x{\makebox[0pt][r]{\scriptsize 78\hspace{1em}}\@s{27.72} VotedFor ( a ,\, b
  ,\, v ) \.{\land} VotedFor ( a ,\, b ,\, w ) \.{\implies} ( v \.{=} w )}%
- \@x{\makebox[0pt][r]{\scriptsize 81\hspace{1em}} OneValuePerBallot
+\@pvspace{8.0pt}%
+ \@x{\makebox[0pt][r]{\scriptsize 80\hspace{1em}} OneValuePerBallot
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 82\hspace{1em}}\@s{16.4} \A\, a1 ,\, a2
+ \@x{\makebox[0pt][r]{\scriptsize 81\hspace{1em}}\@s{16.4} \A\, a1 ,\, a2
  \.{\in} Acceptor ,\, b \.{\in} Ballot ,\, v1 ,\, v2 \.{\in} Value \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 83\hspace{1em}}\@s{27.72} VotedFor ( a1 ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 82\hspace{1em}}\@s{27.72} VotedFor ( a1 ,\,
  b ,\, v1 ) \.{\land} VotedFor ( a2 ,\, b ,\, v2 ) \.{\implies} ( v1 \.{=} v2
  )}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 85\hspace{1em}} Inv \.{\defeq} TypeOK
+ \@x{\makebox[0pt][r]{\scriptsize 84\hspace{1em}} Inv \.{\defeq} TypeOK
  \.{\land} VotesSafe \.{\land} OneValuePerBallot}%
-\@x{\makebox[0pt][r]{\scriptsize 86\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 87\hspace{1em}} {\THEOREM} AllSafeAtZero
+\@x{\makebox[0pt][r]{\scriptsize 85\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 86\hspace{1em}} {\THEOREM} AllSafeAtZero
  \.{\defeq} \A\, v \.{\in} Value \.{:} SafeAt ( 0 ,\, v )}%
-\@x{\makebox[0pt][r]{\scriptsize 88\hspace{1em}}\@s{8.2} {\BY} {\DEF} SafeAt}%
+\@x{\makebox[0pt][r]{\scriptsize 87\hspace{1em}}\@s{8.2} {\BY} {\DEF} SafeAt}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 90\hspace{1em}} {\THEOREM} ChoosableThm
+ \@x{\makebox[0pt][r]{\scriptsize 89\hspace{1em}} {\THEOREM} ChoosableThm
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 91\hspace{1em}}\@s{55.02} \A\, b \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 90\hspace{1em}}\@s{55.02} \A\, b \.{\in}
  Ballot ,\, v \.{\in} Value \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 92\hspace{1em}}\@s{62.24} ChosenAt ( b ,\, v
+ \@x{\makebox[0pt][r]{\scriptsize 91\hspace{1em}}\@s{62.24} ChosenAt ( b ,\, v
  ) \.{\implies} NoneOtherChoosableAt ( b ,\, v )}%
- \@x{\makebox[0pt][r]{\scriptsize 93\hspace{1em}}\@s{8.2} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 92\hspace{1em}}\@s{8.2} {\BY} {\DEF}
  ChosenAt ,\, NoneOtherChoosableAt}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 95\hspace{1em}} {\THEOREM} OneVoteThm
+ \@x{\makebox[0pt][r]{\scriptsize 94\hspace{1em}} {\THEOREM} OneVoteThm
  \.{\defeq} OneValuePerBallot \.{\implies} OneVote}%
- \@x{\makebox[0pt][r]{\scriptsize 96\hspace{1em}}\@s{8.2} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 95\hspace{1em}}\@s{8.2} {\BY} {\DEF}
  OneValuePerBallot ,\, OneVote}%
-\@x{\makebox[0pt][r]{\scriptsize 97\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 98\hspace{1em}} {\THEOREM}
+\@x{\makebox[0pt][r]{\scriptsize 96\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 97\hspace{1em}} {\THEOREM}
  VotesSafeImpliesConsistency \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 99\hspace{1em}}\@s{12.29} {\ASSUME}
+ \@x{\makebox[0pt][r]{\scriptsize 98\hspace{1em}}\@s{12.29} {\ASSUME}
  VotesSafe ,\, OneVote ,\, chosen \.{\neq} \{ \}}%
- \@x{\makebox[0pt][r]{\scriptsize 100\hspace{1em}}\@s{12.29} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 99\hspace{1em}}\@s{12.29} {\PROVE}\@s{4.1}
  \E\, v \.{\in} Value \.{:} chosen \.{=} \{ v \}}%
- \@x{\makebox[0pt][r]{\scriptsize 101\hspace{1em}}\@pfstepnum{1}{1.}\  {\PICK}
+ \@x{\makebox[0pt][r]{\scriptsize 100\hspace{1em}}\@pfstepnum{1}{1.}\  {\PICK}
  v \.{\in} Value \.{:} v \.{\in} chosen}%
-\begin{lcom}{0}%
-\begin{cpar}{0}{T}{T}{0}{2.5}{%
-\ensuremath{\@pfstepnum{1}{1.}} \ensuremath{{\SUFFICES}}}%
- \ensuremath{{\ASSUME}} \ensuremath{{\NEW}} \ensuremath{v \.{\in} Value},
- \ensuremath{v \.{\in} chosen
- } \ensuremath{{\PROVE}} \ensuremath{\E\, u \.{\in} Value} :
- \ensuremath{chosen \.{=} \{u\}
-}%
-\end{cpar}%
-\end{lcom}%
- \@x{\makebox[0pt][r]{\scriptsize 106\hspace{1em}}\@s{8.2} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 101\hspace{1em}}\@s{8.2} {\BY} {\DEF}
  chosen}%
- \@x{\makebox[0pt][r]{\scriptsize 107\hspace{1em}}\@pfstepnum{1}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 102\hspace{1em}}\@pfstepnum{1}{2.}\ 
  {\SUFFICES} {\ASSUME} {\NEW} w \.{\in} chosen}%
- \@x{\makebox[0pt][r]{\scriptsize 108\hspace{1em}}\@s{68.17} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 103\hspace{1em}}\@s{68.17} {\PROVE}\@s{4.1}
  w \.{=} v}%
- \@x{\makebox[0pt][r]{\scriptsize 109\hspace{1em}}\@s{8.2}
+ \@x{\makebox[0pt][r]{\scriptsize 104\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2}\ }%
- \@x{\makebox[0pt][r]{\scriptsize 110\hspace{1em}}\@pfstepnum{1}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 105\hspace{1em}}\@pfstepnum{1}{3.}\ 
  {\ASSUME} {\NEW} b1\@s{0.44} \.{\in} Ballot ,\, {\NEW} b2 \.{\in} Ballot ,\,
  b1 \.{<} b2 ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 111\hspace{1em}}\@s{62.13} {\NEW} v1 \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 106\hspace{1em}}\@s{62.13} {\NEW} v1 \.{\in}
  Value ,\, {\NEW} v2 \.{\in} Value ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 112\hspace{1em}}\@s{62.13} ChosenAt ( b1 ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 107\hspace{1em}}\@s{62.13} ChosenAt ( b1 ,\,
  v1 ) \.{\land} ChosenAt ( b2 ,\, v2 )}%
- \@x{\makebox[0pt][r]{\scriptsize 113\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 108\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
  v1 \.{=} v2}%
- \@x{\makebox[0pt][r]{\scriptsize 114\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 109\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
  SafeAt ( b2 ,\, v2 )}%
- \@x{\makebox[0pt][r]{\scriptsize 115\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 110\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{1}{3} ,\, QuorumAssumption ,\, SMT {\DEF} ChosenAt ,\,
  VotesSafe}%
- \@x{\makebox[0pt][r]{\scriptsize 116\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 111\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 117\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 112\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{1}{3} ,\,\@pfstepnum{2}{1} ,\, QuorumAssumption ,\, Z3}%
- \@x{\makebox[0pt][r]{\scriptsize 118\hspace{1em}}\@s{16.4} {\DEFS}
+ \@x{\makebox[0pt][r]{\scriptsize 113\hspace{1em}}\@s{16.4} {\DEFS}
  CannotVoteAt ,\, DidNotVoteAt ,\, OneVote ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 119\hspace{1em}}\@s{41.93} ChosenAt ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 114\hspace{1em}}\@s{41.93} ChosenAt ,\,
  NoneOtherChoosableAt ,\, Ballot ,\, SafeAt}%
-\@x{\makebox[0pt][r]{\scriptsize 120\hspace{1em}}\@pfstepnum{1}{4.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 121\hspace{1em}}\@s{8.2} {\BY}
+\@x{\makebox[0pt][r]{\scriptsize 115\hspace{1em}}\@pfstepnum{1}{4.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 116\hspace{1em}}\@s{8.2} {\BY}
  QuorumAssumption ,\,\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2}
  ,\,\@pfstepnum{1}{3} ,\, Z3}%
- \@x{\makebox[0pt][r]{\scriptsize 122\hspace{1em}}\@s{8.2} {\DEFS} Ballot ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 117\hspace{1em}}\@s{8.2} {\DEFS} Ballot ,\,
  ChosenAt ,\, OneVote ,\, chosen}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 124\hspace{1em}} {\THEOREM} ShowsSafety
+ \@x{\makebox[0pt][r]{\scriptsize 119\hspace{1em}} {\THEOREM} ShowsSafety
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 125\hspace{1em}}\@s{55.02} TypeOK \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 120\hspace{1em}}\@s{55.02} TypeOK \.{\land}
  VotesSafe \.{\land} OneValuePerBallot \.{\implies}}%
- \@x{\makebox[0pt][r]{\scriptsize 126\hspace{1em}}\@s{67.32} \A\, Q \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 121\hspace{1em}}\@s{67.32} \A\, Q \.{\in}
  Quorum ,\, b \.{\in} Ballot ,\, v \.{\in} Value \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 127\hspace{1em}}\@s{75.52} ShowsSafeAt ( Q
+ \@x{\makebox[0pt][r]{\scriptsize 122\hspace{1em}}\@s{75.52} ShowsSafeAt ( Q
  ,\, b ,\, v ) \.{\implies} SafeAt ( b ,\, v )}%
- \@x{\makebox[0pt][r]{\scriptsize 128\hspace{1em}}\@s{8.2} {\BY}
+ \@x{\makebox[0pt][r]{\scriptsize 123\hspace{1em}}\@s{8.2} {\BY}
  QuorumAssumption ,\, Z3}%
- \@x{\makebox[0pt][r]{\scriptsize 129\hspace{1em}}\@s{8.2} {\DEFS} Ballot ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 124\hspace{1em}}\@s{8.2} {\DEFS} Ballot ,\,
  TypeOK ,\, VotesSafe ,\, OneValuePerBallot ,\, SafeAt ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 130\hspace{1em}}\@s{16.4} ShowsSafeAt ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 125\hspace{1em}}\@s{16.4} ShowsSafeAt ,\,
  CannotVoteAt ,\, NoneOtherChoosableAt ,\, DidNotVoteAt}%
-\@x{\makebox[0pt][r]{\scriptsize 131\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 132\hspace{1em}} {\THEOREM} Invariance
+\@x{\makebox[0pt][r]{\scriptsize 126\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 127\hspace{1em}} {\THEOREM} Invariance
  \.{\defeq} Spec \.{\implies} {\Box} Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 133\hspace{1em}}\@pfstepnum{1}{1.}\  Init
+ \@x{\makebox[0pt][r]{\scriptsize 128\hspace{1em}}\@pfstepnum{1}{1.}\  Init
  \.{\implies} Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 134\hspace{1em}}\@s{8.2} {\BY} SMT {\DEF}
- Init ,\, Inv ,\, VotesSafe ,\, VotedFor ,\, TypeOK ,\, VotesSafe ,\,
- OneValuePerBallot}%
- \@x{\makebox[0pt][r]{\scriptsize 135\hspace{1em}}\@pfstepnum{1}{2.}\ 
- {\ASSUME} Inv ,\, [ Next ]_{ {\langle} votes ,\, maxBal {\rangle}}}%
- \@x{\makebox[0pt][r]{\scriptsize 136\hspace{1em}}\@s{23.88} {\PROVE} Inv
+ \@x{\makebox[0pt][r]{\scriptsize 129\hspace{1em}}\@s{8.2} {\BY} {\DEF} Init
+ ,\, Inv ,\, TypeOK ,\, VotesSafe ,\, VotedFor ,\, OneValuePerBallot}%
+ \@x{\makebox[0pt][r]{\scriptsize 130\hspace{1em}}\@pfstepnum{1}{2.}\  Inv
+ \.{\land} [ Next ]_{ {\langle} votes ,\, maxBal {\rangle}} \.{\implies} Inv
  \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 137\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
- {\USE} {\DEF} Inv ,\, Ballot ,\, VotedFor ,\, VoteFor}%
- \@x{\makebox[0pt][r]{\scriptsize 138\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}
- {\CASE} {\UNCHANGED} {\langle} votes ,\, maxBal {\rangle}}%
- \@x{\makebox[0pt][r]{\scriptsize 139\hspace{1em}}\@s{16.4}
- {\BY}\@pfstepnum{1}{2} ,\,\@pfstepnum{2}{1} ,\, IsaM (\@w{auto} )}%
- \@x{\makebox[0pt][r]{\scriptsize 140\hspace{1em}}\@s{16.4} {\DEFS}
- IncreaseMaxBal ,\, ShowsSafeAt ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 141\hspace{1em}}\@s{41.93} DidNotVoteAt ,\,
- TypeOK ,\, VotesSafe ,\, OneValuePerBallot ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 142\hspace{1em}}\@s{41.93} SafeAt ,\,
- NoneOtherChoosableAt ,\, CannotVoteAt}%
- \@x{\makebox[0pt][r]{\scriptsize 143\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}
- {\CASE} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 144\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 131\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}
+ {\CASE} \.{\land} Inv}%
+\@x{\makebox[0pt][r]{\scriptsize 132\hspace{1em}}\@s{54.73} \.{\land} Next}%
+ \@x{\makebox[0pt][r]{\scriptsize 133\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ {\ASSUME} {\NEW} a \.{\in} Acceptor ,\, {\NEW} b \.{\in} Ballot ,\,}%
+ \@x{\makebox[0pt][r]{\scriptsize 134\hspace{1em}}\@s{78.53} IncreaseMaxBal (
+ a ,\, b )}%
+ \@x{\makebox[0pt][r]{\scriptsize 135\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ Inv \.{\land} [ Next ]_{ {\langle} votes ,\, maxBal {\rangle}} \.{\implies}
+ Inv \.{'}}%
+ \@x{\makebox[0pt][r]{\scriptsize 136\hspace{1em}}\@s{24.59}
+ {\BY}\@pfstepnum{3}{1}\ }%
+ \@x{\makebox[0pt][r]{\scriptsize 137\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
+ {\ASSUME} {\NEW} a \.{\in} Acceptor ,\, {\NEW} b \.{\in} Ballot ,\,}%
+ \@x{\makebox[0pt][r]{\scriptsize 138\hspace{1em}}\@s{78.53} \E\, v \.{\in}
+ Value \.{:} VoteFor ( a ,\, b ,\, v )}%
+ \@x{\makebox[0pt][r]{\scriptsize 139\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ Inv \.{\land} [ Next ]_{ {\langle} votes ,\, maxBal {\rangle}} \.{\implies}
+ Inv \.{'}}%
+ \@x{\makebox[0pt][r]{\scriptsize 140\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 145\hspace{1em}}\@s{16.4}
- {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2} ,\,\@pfstepnum{1}{2} ,\, SMT}%
-\@x{\makebox[0pt][r]{\scriptsize 146\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 147\hspace{1em}}\@s{8.2}
+ \@x{\makebox[0pt][r]{\scriptsize 141\hspace{1em}}\@s{24.59}
+ {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2}\  {\DEF}
+ Next}%
+ \@x{\makebox[0pt][r]{\scriptsize 142\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}
+ {\CASE} \.{\land} Inv}%
+ \@x{\makebox[0pt][r]{\scriptsize 143\hspace{1em}}\@s{54.73} \.{\land}
+ {\UNCHANGED} {\langle} votes ,\, maxBal {\rangle}}%
+ \@x{\makebox[0pt][r]{\scriptsize 144\hspace{1em}}\@s{16.4}
+ {\BY}\@pfstepnum{2}{2}\ }%
+ \@x{\makebox[0pt][r]{\scriptsize 145\hspace{1em}}\@s{16.4} {\DEFS} Inv ,\,
+ TypeOK ,\, VotesSafe ,\, OneValuePerBallot ,\,}%
+ \@x{\makebox[0pt][r]{\scriptsize 146\hspace{1em}}\@s{41.93} VotedFor ,\,
+ SafeAt ,\, NoneOtherChoosableAt ,\, CannotVoteAt ,\, DidNotVoteAt}%
+ \@x{\makebox[0pt][r]{\scriptsize 147\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 148\hspace{1em}}\@s{16.4}
+ {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2}\ }%
+\@x{\makebox[0pt][r]{\scriptsize 149\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 150\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2} ,\, PTL {\DEF} Spec}%
-\@x{\makebox[0pt][r]{\scriptsize 148\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 149\hspace{1em}} C \.{\defeq} {\INSTANCE}
+\@pvspace{8.0pt}%
+\@x{\makebox[0pt][r]{\scriptsize 152\hspace{1em}}\@s{8.2}}%
+\@y{\@s{0}%
+ \ensuremath{\@pfstepnum{2}{}} \ensuremath{{\USE}} \ensuremath{{\DEF}}
+ \ensuremath{Inv}, \ensuremath{TypeOK}, \ensuremath{VotesSafe},
+ \ensuremath{OneValuePerBallot}, \ensuremath{Ballot}, \ensuremath{VotedFor},
+ \ensuremath{VoteFor
+}}%
+\@xx{}%
+\@x{\makebox[0pt][r]{\scriptsize 153\hspace{1em}}\@s{8.2}}%
+\@y{\@s{0}%
+ \ensuremath{NoneOtherChoosableAt}, \ensuremath{CannotVoteAt},
+ \ensuremath{DidNotVoteAt
+}}%
+\@xx{}%
+\@x{\makebox[0pt][r]{\scriptsize 154\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 155\hspace{1em}} C \.{\defeq} {\INSTANCE}
  Consensus}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 151\hspace{1em}} {\THEOREM} Spec \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 157\hspace{1em}} {\THEOREM} Spec \.{\land}
  Inv \.{\implies} C {\bang} Spec}%
- \@x{\makebox[0pt][r]{\scriptsize 152\hspace{1em}}\@pfstepnum{1}{1.}\  Init
+ \@x{\makebox[0pt][r]{\scriptsize 158\hspace{1em}}\@pfstepnum{1}{1.}\  Init
  \.{\implies} C {\bang} Init}%
- \@x{\makebox[0pt][r]{\scriptsize 153\hspace{1em}}\@s{8.2} {\BY}
+ \@x{\makebox[0pt][r]{\scriptsize 159\hspace{1em}}\@s{8.2} {\BY}
  QuorumAssumption ,\, SetExtensionality ,\, IsaM (\@w{force} )}%
- \@x{\makebox[0pt][r]{\scriptsize 154\hspace{1em}}\@s{8.2} {\DEF} Init ,\, C
+ \@x{\makebox[0pt][r]{\scriptsize 160\hspace{1em}}\@s{8.2} {\DEF} Init ,\, C
  {\bang} Init ,\, chosen ,\, ChosenAt ,\, VotedFor}%
- \@x{\makebox[0pt][r]{\scriptsize 155\hspace{1em}}\@pfstepnum{1}{2.}\  Next
+ \@x{\makebox[0pt][r]{\scriptsize 161\hspace{1em}}\@pfstepnum{1}{2.}\  Next
  \.{\land} Inv \.{\implies} C {\bang} Next \.{\lor} {\UNCHANGED} chosen}%
- \@x{\makebox[0pt][r]{\scriptsize 156\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 162\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1}\ 
  {\SUFFICES} {\ASSUME} Next ,\, Inv {\PROVE} C {\bang} Next \.{\lor}
  {\UNCHANGED} chosen}%
- \@x{\makebox[0pt][r]{\scriptsize 157\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 163\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1}\ }%
- \@x{\makebox[0pt][r]{\scriptsize 158\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 164\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
  chosen \.{\subseteq} chosen \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 159\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 165\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\, QuorumAssumption ,\, Z3\@s{8.2}}%
 \@y{\@s{0}%
  \ensuremath{SMTT(10)} fails
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 160\hspace{1em}}\@s{16.4} {\DEF} Next ,\,
+ \@x{\makebox[0pt][r]{\scriptsize 166\hspace{1em}}\@s{16.4} {\DEF} Next ,\,
  Inv ,\, TypeOK ,\, IncreaseMaxBal ,\, chosen ,\, ChosenAt ,\, VotedFor ,\,
  Ballot ,\, VoteFor}%
- \@x{\makebox[0pt][r]{\scriptsize 161\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 167\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
  chosen \.{'} \.{=} \{ \} \.{\lor} \E\, v \.{\in} Value \.{:} chosen \.{'}
  \.{=} \{ v \}}%
- \@x{\makebox[0pt][r]{\scriptsize 162\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 168\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
  {\PICK} a \.{\in} Acceptor ,\, b \.{\in} Ballot \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 163\hspace{1em}}\@s{52.58} \.{\lor}
+ \@x{\makebox[0pt][r]{\scriptsize 169\hspace{1em}}\@s{52.58} \.{\lor}
  IncreaseMaxBal ( a ,\, b )}%
- \@x{\makebox[0pt][r]{\scriptsize 164\hspace{1em}}\@s{52.58} \.{\lor} \E\, v
+ \@x{\makebox[0pt][r]{\scriptsize 170\hspace{1em}}\@s{52.58} \.{\lor} \E\, v
  \.{\in} Value \.{:} VoteFor ( a ,\, b ,\, v )}%
- \@x{\makebox[0pt][r]{\scriptsize 165\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 171\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{2}{1}\  {\DEF} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 166\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}
+ \@x{\makebox[0pt][r]{\scriptsize 172\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}
  {\CASE} IncreaseMaxBal ( a ,\, b )}%
- \@x{\makebox[0pt][r]{\scriptsize 167\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}
+ \@x{\makebox[0pt][r]{\scriptsize 173\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}
  {\CASE} \E\, v \.{\in} Value \.{:} VoteFor ( a ,\, b ,\, v )}%
- \@x{\makebox[0pt][r]{\scriptsize 168\hspace{1em}}\@s{16.4}\@pfstepnum{3}{q.}\
+ \@x{\makebox[0pt][r]{\scriptsize 174\hspace{1em}}\@s{16.4}\@pfstepnum{3}{q.}\
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 169\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 175\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2} ,\,\@pfstepnum{3}{3} ,\, SMT}%
- \@x{\makebox[0pt][r]{\scriptsize 170\hspace{1em}}\@s{8.2}\@pfstepnum{2}{q.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 176\hspace{1em}}\@s{8.2}\@pfstepnum{2}{q.}\ 
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 171\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 177\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2} ,\,\@pfstepnum{2}{3} ,\,
  OneVoteThm ,\, VotesSafeImpliesConsistency ,\, SetExtensionality ,\, SMT}%
- \@x{\makebox[0pt][r]{\scriptsize 172\hspace{1em}}\@s{16.4} {\DEF} Inv ,\, C
+ \@x{\makebox[0pt][r]{\scriptsize 178\hspace{1em}}\@s{16.4} {\DEF} Inv ,\, C
  {\bang} Next}%
-\@x{\makebox[0pt][r]{\scriptsize 173\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 174\hspace{1em}}\@s{8.2} {\PROOF}
+\@x{\makebox[0pt][r]{\scriptsize 179\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 180\hspace{1em}}\@s{8.2} {\PROOF}
  {\OMITTED}}%
-\@x{\makebox[0pt][r]{\scriptsize 175\hspace{1em}}}\bottombar\@xx{}%
+\@x{\makebox[0pt][r]{\scriptsize 181\hspace{1em}}}\bottombar\@xx{}%
 \end{document}

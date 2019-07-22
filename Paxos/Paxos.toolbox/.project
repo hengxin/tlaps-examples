@@ -18,7 +18,7 @@
 		<link>
 			<name>Consensus.tla</name>
 			<type>1</type>
-			<location>/home/hengxin/git-projects/tlaps-examples/Paxos/Consensus.tla</location>
+			<locationURI>PARENT-1-PROJECT_LOC/Consensus.tla</locationURI>
 		</link>
 		<link>
 			<name>FiniteSets.tla</name>
@@ -29,6 +29,11 @@
 			<name>Paxos.tla</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Paxos.tla</locationURI>
+		</link>
+		<link>
+			<name>PaxosHistVar.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PaxosHistVar.tla</locationURI>
 		</link>
 		<link>
 			<name>TLAPS.tla</name>

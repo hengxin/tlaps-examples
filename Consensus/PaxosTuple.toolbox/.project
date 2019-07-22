@@ -26,6 +26,11 @@
 			<location>/usr/local/lib/tlaps/NaturalsInduction.tla</location>
 		</link>
 		<link>
+			<name>PaxosProof.tla</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/PaxosProof.tla</locationURI>
+		</link>
+		<link>
 			<name>PaxosTuple.tla</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/PaxosTuple.tla</locationURI>
