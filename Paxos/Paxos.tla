@@ -56,9 +56,9 @@ Phase1b(a) ==
   \E m \in msgs : 
      /\ m.type = "1a"
      /\ m.bal > maxBal[a]
-     /\ Send([type |-> "1b", bal |-> m.bal, maxVBal |-> maxVBal[a], 
-               maxVal |-> maxVal[a], acc |-> a])
      /\ maxBal' = [maxBal EXCEPT ![a] = m.bal]
+     /\ Send([type |-> "1b", bal |-> m.bal, 
+           maxVBal |-> maxVBal[a], maxVal |-> maxVal[a], acc |-> a])
      /\ UNCHANGED <<maxVBal, maxVal>>
         
 Phase2a(b) ==
@@ -79,10 +79,10 @@ Phase2b(a) ==
   \E m \in msgs :
     /\ m.type = "2a" 
     /\ m.bal >= maxBal[a]
-    /\ Send([type |-> "2b", bal |-> m.bal, val |-> m.val, acc |-> a])
     /\ maxVBal' = [maxVBal EXCEPT ![a] = m.bal]
     /\ maxBal' = [maxBal EXCEPT ![a] = m.bal]
     /\ maxVal' = [maxVal EXCEPT ![a] = m.val]
+    /\ Send([type |-> "2b", bal |-> m.bal, val |-> m.val, acc |-> a])
 -----------------------------------------------------------------------------
 Next == \/ \E b \in Ballots : Phase1a(b) \/ Phase2a(b)
         \/ \E a \in Acceptors : Phase1b(a) \/ Phase2b(a) 
@@ -495,7 +495,7 @@ THEOREM Refinement == Spec => C!Spec
   BY <1>1, <1>2, Invariant, Consistent, PTL DEF Spec, C!Spec, Inv
 =============================================================================
 \* Modification History
-\* Last modified Mon Jul 22 20:58:32 CST 2019 by hengxin
+\* Last modified Tue Jul 30 21:29:49 CST 2019 by hengxin
 \* Last modified Mon Jul 22 20:30:39 CST 2019 by hengxin
 \* Last modified Fri Nov 28 10:39:17 PST 2014 by lamport
 \* Last modified Sun Nov 23 14:45:09 PST 2014 by lamport

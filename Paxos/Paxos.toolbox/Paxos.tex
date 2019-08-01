@@ -1058,13 +1058,13 @@ See http:\ensuremath{\.{\slsl}research.microsoft.com}/en-us/um/people/lamport/pu
  \.{=}\@w{1a}}%
  \@x{\makebox[0pt][r]{\scriptsize 58\hspace{1em}}\@s{15.42} \.{\land} m . bal
  \.{>} maxBal [ a ]}%
- \@x{\makebox[0pt][r]{\scriptsize 59\hspace{1em}}\@s{15.42} \.{\land} Send ( [
- type \.{\mapsto}\@w{1b} ,\, bal \.{\mapsto} m . bal ,\, maxVBal \.{\mapsto}
- maxVBal [ a ] ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 60\hspace{1em}}\@s{59.28} maxVal \.{\mapsto}
- maxVal [ a ] ,\, acc \.{\mapsto} a ] )}%
- \@x{\makebox[0pt][r]{\scriptsize 61\hspace{1em}}\@s{15.42} \.{\land} maxBal
+ \@x{\makebox[0pt][r]{\scriptsize 59\hspace{1em}}\@s{15.42} \.{\land} maxBal
  \.{'} \.{=} [ maxBal {\EXCEPT} {\bang} [ a ] \.{=} m . bal ]}%
+ \@x{\makebox[0pt][r]{\scriptsize 60\hspace{1em}}\@s{15.42} \.{\land} Send ( [
+ type\@s{6.61} \.{\mapsto}\@w{1b} ,\, bal \.{\mapsto} m . bal ,\,}%
+ \@x{\makebox[0pt][r]{\scriptsize 61\hspace{1em}}\@s{38.83} maxVBal
+ \.{\mapsto} maxVBal [ a ] ,\, maxVal \.{\mapsto} maxVal [ a ] ,\, acc
+ \.{\mapsto} a ] )}%
  \@x{\makebox[0pt][r]{\scriptsize 62\hspace{1em}}\@s{15.42} \.{\land}
  {\UNCHANGED} {\langle} maxVBal ,\, maxVal {\rangle}}%
 \@pvspace{8.0pt}%
@@ -1103,16 +1103,16 @@ See http:\ensuremath{\.{\slsl}research.microsoft.com}/en-us/um/people/lamport/pu
  \.{=}\@w{2a}}%
  \@x{\makebox[0pt][r]{\scriptsize 81\hspace{1em}}\@s{16.4} \.{\land} m . bal
  \.{\geq} maxBal [ a ]}%
- \@x{\makebox[0pt][r]{\scriptsize 82\hspace{1em}}\@s{16.4} \.{\land} Send ( [
- type \.{\mapsto}\@w{2b} ,\, bal \.{\mapsto} m . bal ,\, val \.{\mapsto} m .
- val ,\, acc \.{\mapsto} a ] )}%
- \@x{\makebox[0pt][r]{\scriptsize 83\hspace{1em}}\@s{16.4} \.{\land} maxVBal
+ \@x{\makebox[0pt][r]{\scriptsize 82\hspace{1em}}\@s{16.4} \.{\land} maxVBal
  \.{'} \.{=} [ maxVBal {\EXCEPT} {\bang} [ a ] \.{=} m . bal ]}%
- \@x{\makebox[0pt][r]{\scriptsize 84\hspace{1em}}\@s{16.4} \.{\land} maxBal
+ \@x{\makebox[0pt][r]{\scriptsize 83\hspace{1em}}\@s{16.4} \.{\land} maxBal
  \.{'} \.{=} [ maxBal {\EXCEPT} {\bang} [ a ] \.{=} m . bal ]}%
- \@x{\makebox[0pt][r]{\scriptsize 85\hspace{1em}}\@s{16.4} \.{\land} maxVal
+ \@x{\makebox[0pt][r]{\scriptsize 84\hspace{1em}}\@s{16.4} \.{\land} maxVal
  \.{'}\@s{0.37} \.{=} [ maxVal {\EXCEPT} {\bang} [ a ]\@s{0.37} \.{=} m . val
  ]}%
+ \@x{\makebox[0pt][r]{\scriptsize 85\hspace{1em}}\@s{16.4} \.{\land} Send ( [
+ type \.{\mapsto}\@w{2b} ,\, bal \.{\mapsto} m . bal ,\, val \.{\mapsto} m .
+ val ,\, acc \.{\mapsto} a ] )}%
 \@x{\makebox[0pt][r]{\scriptsize 86\hspace{1em}}}\midbar\@xx{}%
  \@x{\makebox[0pt][r]{\scriptsize 87\hspace{1em}} Next \.{\defeq} \.{\lor}
  \E\, b\@s{0.64} \.{\in} Ballots \.{:} Phase1a ( b ) \.{\lor} Phase2a ( b )}%
@@ -1868,7 +1868,7 @@ The following lemma shows that (the invariant implies that) the
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
  \ensuremath{\@pfstepnum{4}{11}}, \ensuremath{SafeAtStable
- \.{\,\backslash\,}}*, \ensuremath{Zenon
+ \.{\,\backslash\,}\.{*},\, Zenon
  } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
@@ -1895,7 +1895,7 @@ The following lemma shows that (the invariant implies that) the
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
  \ensuremath{\@pfstepnum{4}{11}}, \ensuremath{SafeAtStable
- \.{\,\backslash\,}}*, \ensuremath{Zenon
+ \.{\,\backslash\,}\.{*},\, Zenon
  } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
@@ -1929,7 +1929,7 @@ The following lemma shows that (the invariant implies that) the
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
  \ensuremath{\@pfstepnum{4}{11}},
- \ensuremath{SafeAtStable\.{\,\backslash\,}}* , \ensuremath{Zenon
+ \ensuremath{SafeAtStable\.{\,\backslash\,}\.{*} ,\, Zenon
  } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
@@ -2129,55 +2129,55 @@ The following lemma shows that (the invariant implies that) the
 \setboolean{shading}{false}
 \begin{lcom}{0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
-\ensuremath{\.{\,\backslash\,}}* Modification History
+\ensuremath{\.{\,\backslash\,}\.{*}} Modification History
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Mon}
- \ensuremath{Jul} 22 20:58:32 \ensuremath{CST} 2019 by \ensuremath{hengxin
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
+ \ensuremath{Jul} 30 21:29:49 \ensuremath{CST} 2019 by \ensuremath{hengxin
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Mon}
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Mon}
  \ensuremath{Jul} 22 20:30:39 \ensuremath{CST} 2019 by \ensuremath{hengxin
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Fri}
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Fri}
  \ensuremath{Nov} 28 10:39:17 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified Sun \ensuremath{Nov} 23
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sun \ensuremath{Nov} 23
  14:45:09 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Mon}
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Mon}
  \ensuremath{Nov} 24 02:03:02 \ensuremath{CET} 2014 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified Sat \ensuremath{Nov} 22
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat \ensuremath{Nov} 22
  12:04:19 \ensuremath{CET} 2014 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Fri}
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Fri}
  \ensuremath{Nov} 21 17:40:41 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Tue}
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
  \ensuremath{Mar} 18 11:37:57 \ensuremath{CET} 2014 by \ensuremath{doligez
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Last modified Sat \ensuremath{Nov} 24
+ \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat \ensuremath{Nov} 24
  18:53:09 \ensuremath{GMT\.{-}03}:00 2012 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}}* Created Sat \ensuremath{Nov} 17 16:02:06
+ \ensuremath{\.{\,\backslash\,}\.{*}} Created Sat \ensuremath{Nov} 17 16:02:06
  \ensuremath{PST} 2012 by \ensuremath{lamport
 }%
 \end{cpar}%
