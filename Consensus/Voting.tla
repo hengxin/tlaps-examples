@@ -14,16 +14,15 @@ Ballot == Nat
 -----------------------------------------------------------------------------
 VARIABLES votes, maxBal
 
-TypeOK == 
-    /\ votes \in [Acceptor -> SUBSET (Ballot \X Value)]
-    /\ maxBal \in [Acceptor -> Ballot \cup {-1}]
+TypeOK == /\ votes \in [Acceptor -> SUBSET (Ballot \X Value)]
+          /\ maxBal \in [Acceptor -> Ballot \cup {-1}]
 -----------------------------------------------------------------------------
 VotedFor(a, b, v) == <<b, v>> \in votes[a]
 
 DidNotVoteAt(a, b) == \A v \in Value : ~ VotedFor(a, b, v)
 
 ShowsSafeAt(Q, b, v) ==
-  /\ \A a \in Q : maxBal[a] \geq b
+  /\ \A a \in Q : maxBal[a] \geq b \* have promised
   /\ \E c \in -1..(b-1) :
       /\ (c # -1) => \E a \in Q : VotedFor(a, c, v)
       /\ \A d \in (c+1)..(b-1), a \in Q : DidNotVoteAt(a, d)
@@ -34,17 +33,17 @@ Init ==
 
 IncreaseMaxBal(a, b) ==
   /\ b > maxBal[a]
-  /\ maxBal' = [maxBal EXCEPT ![a] = b]
+  /\ maxBal' = [maxBal EXCEPT ![a] = b] \* make promise
   /\ UNCHANGED votes
 
 VoteFor(a, b, v) ==
-    /\ maxBal[a] <= b
+    /\ maxBal[a] <= b \* keep promise
     /\ \A vt \in votes[a] : vt[1] # b
     /\ \A c \in Acceptor \ {a} :
          \A vt \in votes[c] : (vt[1] = b) => (vt[2] = v)
-    /\ \E Q \in Quorum : ShowsSafeAt(Q, b, v)
-    /\ votes' = [votes EXCEPT ![a] = votes[a] \cup {<<b, v>>}]
-    /\ maxBal' = [maxBal EXCEPT ![a] = b]
+    /\ \E Q \in Quorum : ShowsSafeAt(Q, b, v) \* safe to vote
+    /\ votes' = [votes EXCEPT ![a] = votes[a] \cup {<<b, v>>}] \* vote
+    /\ maxBal' = [maxBal EXCEPT ![a] = b] \* make promise
 -----------------------------------------------------------------------------
 Next == 
     \E a \in Acceptor, b \in Ballot : 
@@ -125,32 +124,67 @@ THEOREM ShowsSafety ==
     ShowsSafeAt, CannotVoteAt, NoneOtherChoosableAt, DidNotVoteAt
 -----------------------------------------------------------------------------
 THEOREM Invariance == Spec => []Inv
+<1> USE DEF Inv
 <1>1. Init => Inv
-  BY DEF Init, Inv, TypeOK, VotesSafe, VotedFor, OneValuePerBallot
+  BY DEF Init, TypeOK, VotesSafe, OneValuePerBallot, VotedFor 
 <1>2. Inv /\ [Next]_<<votes, maxBal>> => Inv'
-  <2>1. CASE /\ Inv
-             /\ Next
-    <3>1. ASSUME NEW a \in Acceptor, NEW b \in Ballot,
-                 IncreaseMaxBal(a, b)
-          PROVE  Inv /\ [Next]_<<votes, maxBal>> => Inv'
-      BY <3>1
-    <3>2. ASSUME NEW a \in Acceptor, NEW b \in Ballot,
-                 \E v \in Value : VoteFor(a, b, v)
-          PROVE  Inv /\ [Next]_<<votes, maxBal>> => Inv'
+  <2> SUFFICES ASSUME Inv, [Next]_<<votes, maxBal>>
+               PROVE  Inv'
+    OBVIOUS               
+  <2>1. CASE Next
+    <3> SUFFICES ASSUME NEW a \in Acceptor, NEW b \in Ballot,
+                        \/ IncreaseMaxBal(a, b)
+                        \/ \E v \in Value : VoteFor(a, b, v)
+                 PROVE  Inv'
+      BY <2>1 DEF Next
+    <3>1. CASE IncreaseMaxBal(a, b)
+      <4>1. TypeOK'
+        BY <3>1 DEF TypeOK, IncreaseMaxBal
+      <4>2. VotesSafe'
+        <5> SUFFICES ASSUME NEW a_1 \in Acceptor', NEW b_1 \in Ballot', NEW v \in Value',
+                            VotedFor(a_1, b_1, v)',
+                            NEW c \in (0..(b_1-1))'
+                     PROVE  NoneOtherChoosableAt(c, v)'
+          BY DEF SafeAt, VotesSafe
+        <5>1. PICK Q \in Quorum : 
+                \A a_2 \in Q : VotedFor(a_2, b_1, v)' \/ CannotVoteAt(a_2, b_1)'
+          BY QuorumNonEmpty DEF NoneOtherChoosableAt, TypeOK
+        <5>2. QED
+          BY <3>1, <5>1 
+      <4>3. OneValuePerBallot'
+        BY <3>1 DEF IncreaseMaxBal, OneValuePerBallot, VotedFor
+      <4>4. QED
+        BY <4>1, <4>2, <4>3 DEF Inv
+    <3>2. ASSUME NEW v \in Value,
+                 VoteFor(a, b, v)
+          PROVE  Inv'
+      <4> SUFFICES ASSUME NEW Q \in Quorum,
+                          ShowsSafeAt(Q, b, v)
+                   PROVE  Inv'
+        BY <3>2 DEF VoteFor
+      <4>1. TypeOK'
+        BY <3>2 DEF TypeOK, VoteFor
+      <4>2. VotesSafe' \* Using OneValuePerBallot?
+        (*
+        BY <3>2, ShowsSafety, QuorumAssumption
+        DEFS Ballot, VoteFor, VotesSafe, SafeAt, ShowsSafeAt, CannotVoteAt,
+             NoneOtherChoosableAt, DidNotVoteAt, VotedFor, OneValuePerBallot
+        *)
+      <4>3. OneValuePerBallot'
+        BY <3>2 DEF VoteFor, OneValuePerBallot, VotedFor, TypeOK
+      <4>4. QED
+        BY <3>2, <4>1, <4>2, <4>3 DEF Inv
     <3>3. QED
-      BY <2>1, <3>1, <3>2 DEF Next
-  <2>2. CASE /\ Inv
-             /\ UNCHANGED <<votes, maxBal>>
-    BY <2>2
-    DEFS Inv, TypeOK, VotesSafe, OneValuePerBallot,
-         VotedFor, SafeAt, NoneOtherChoosableAt, CannotVoteAt, DidNotVoteAt
+      BY <2>1, <3>1, <3>2
+  <2>2. CASE UNCHANGED <<votes, maxBal>>
+    BY <2>2 
+    DEFS TypeOK, Next, VotesSafe, OneValuePerBallot, 
+         VotedFor, SafeAt, NoneOtherChoosableAt, CannotVoteAt, DidNotVoteAt, 
+         IncreaseMaxBal, VoteFor
   <2>3. QED
     BY <2>1, <2>2
 <1>3. QED
   BY <1>1, <1>2, PTL DEF Spec
-
-  \* <2> USE DEF Inv, TypeOK, VotesSafe, OneValuePerBallot, Ballot, VotedFor, VoteFor
-  \* NoneOtherChoosableAt, CannotVoteAt, DidNotVoteAt
 ----------------------------------------------------------------------------
 C == INSTANCE Consensus
 
