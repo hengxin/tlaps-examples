@@ -141,16 +141,26 @@ THEOREM Invariance == Spec => []Inv
       <4>1. TypeOK'
         BY <3>1 DEF TypeOK, IncreaseMaxBal
       <4>2. VotesSafe'
-        <5> SUFFICES ASSUME NEW a_1 \in Acceptor', NEW b_1 \in Ballot', NEW v \in Value',
-                            VotedFor(a_1, b_1, v)',
-                            NEW c \in (0..(b_1-1))'
-                     PROVE  NoneOtherChoosableAt(c, v)'
-          BY DEF SafeAt, VotesSafe
-        <5>1. PICK Q \in Quorum : 
-                \A a_2 \in Q : VotedFor(a_2, b_1, v)' \/ CannotVoteAt(a_2, b_1)'
-          BY QuorumNonEmpty DEF NoneOtherChoosableAt, TypeOK
-        <5>2. QED
-          BY <3>1, <5>1 
+        <5> SUFFICES ASSUME NEW a_1 \in Acceptor', NEW b_1 \in Ballot', NEW v \in Value'
+                     PROVE  VotedFor(a_1, b_1, v)' => SafeAt(b_1, v)'
+          BY DEF VotesSafe
+        <5>1. \A aa \in Acceptor, bb \in Ballot, vv \in Value :
+                VotedFor(aa, bb, vv) <=> VotedFor(aa, bb, vv)'
+          BY <3>1 DEF IncreaseMaxBal, VotedFor
+        <5>2. \A aa \in Acceptor, bb \in Ballot :
+                maxBal[aa] > bb => maxBal'[aa] > bb
+          BY <3>1 DEF IncreaseMaxBal, TypeOK, Ballot
+        <5>3. \A aa \in Acceptor, bb \in Ballot :
+                DidNotVoteAt(aa, bb) => DidNotVoteAt(aa, bb)'
+          BY <3>1 DEF IncreaseMaxBal, DidNotVoteAt, VotedFor
+        <5>4. \A aa \in Acceptor, bb \in Ballot :
+                CannotVoteAt(aa, bb) => CannotVoteAt(aa, bb)'
+          BY <3>1, <5>2, <5>3 DEF IncreaseMaxBal, CannotVoteAt
+        <5>5. \A bb \in Ballot, vv \in Value :
+                NoneOtherChoosableAt(bb, vv) => NoneOtherChoosableAt(bb, vv)'
+          BY <5>1, <5>4, QuorumAssumption DEFS NoneOtherChoosableAt                
+        <5>6. QED
+          BY <5>1, <5>5 DEF TypeOK, Ballot, VotesSafe, SafeAt
       <4>3. OneValuePerBallot'
         BY <3>1 DEF IncreaseMaxBal, OneValuePerBallot, VotedFor
       <4>4. QED
