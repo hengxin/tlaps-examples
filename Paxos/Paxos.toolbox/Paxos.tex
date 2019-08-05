@@ -1175,98 +1175,111 @@ See http:\ensuremath{\.{\slsl}research.microsoft.com}/en-us/um/people/lamport/pu
 \@xx{}%
  \@x{\makebox[0pt][r]{\scriptsize 118\hspace{1em}}\@s{136.41} \.{\land}
  VotedForIn ( m . acc ,\, m . maxVal ,\, m . maxVBal )}%
-\@x{\makebox[0pt][r]{\scriptsize 119\hspace{1em}}}%
-\@y{\@s{77.5}%
+\@x{\makebox[0pt][r]{\scriptsize 119\hspace{1em}}\@s{136.41}}%
+\@y{\@s{0}%
  \ensuremath{\.{\land} SafeAt(m.maxVal,\, m.maxVBal)
 }}%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 120\hspace{1em}}\@s{118.9} \.{\lor}
+ \@x{\makebox[0pt][r]{\scriptsize 120\hspace{1em}}\@s{125.30} \.{\lor}
  \.{\land} m . maxVal \.{=} None}%
- \@x{\makebox[0pt][r]{\scriptsize 121\hspace{1em}}\@s{130.01} \.{\land} m .
+ \@x{\makebox[0pt][r]{\scriptsize 121\hspace{1em}}\@s{136.41} \.{\land} m .
  maxVBal \.{=} \.{-} 1}%
-\@x{\makebox[0pt][r]{\scriptsize 122\hspace{1em}}\@s{106.6}}%
-\@y{%
- * conjunct added 2014/03/29 sm
+\@x{\makebox[0pt][r]{\scriptsize 122\hspace{1em}}\@s{114.19}}%
+\@y{\@s{0}%
+ conjunct added 2014/03/29 sm
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 123\hspace{1em}}\@s{106.6} \.{\land} \A\, c
+ \@x{\makebox[0pt][r]{\scriptsize 123\hspace{1em}}\@s{114.19} \.{\land} \A\, c
  \.{\in} ( m . maxVBal \.{+} 1 ) \.{\dotdot} ( m . bal \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 124\hspace{1em}}\@s{124.93} {\lnot} \E\, v
+ \@x{\makebox[0pt][r]{\scriptsize 124\hspace{1em}}\@s{132.52} {\lnot} \E\, v
  \.{\in} Values \.{:} VotedForIn ( m . acc ,\, v ,\, c )}%
  \@x{\makebox[0pt][r]{\scriptsize 125\hspace{1em}}\@s{16.4} \.{\land} ( m .
- type \.{=}\@w{2a} ) \.{\implies}}%
+ type \.{=}\@w{2a} )\@s{0.36} \.{\implies}}%
  \@x{\makebox[0pt][r]{\scriptsize 126\hspace{1em}}\@s{40.34} \.{\land} SafeAt
  ( m . val ,\, m . bal )}%
  \@x{\makebox[0pt][r]{\scriptsize 127\hspace{1em}}\@s{40.34} \.{\land} \A\, ma
  \.{\in} msgs \.{:} ( ma . type \.{=}\@w{2a} ) \.{\land} ( ma . bal \.{=} m .
- bal )}%
- \@x{\makebox[0pt][r]{\scriptsize 128\hspace{1em}}\@s{134.12} \.{\implies} (
- ma \.{=} m )}%
- \@x{\makebox[0pt][r]{\scriptsize 129\hspace{1em}}\@s{16.4} \.{\land} ( m .
+ bal ) \.{\implies} ( ma \.{=} m )}%
+ \@x{\makebox[0pt][r]{\scriptsize 128\hspace{1em}}\@s{16.4} \.{\land} ( m .
  type \.{=}\@w{2b} ) \.{\implies}}%
- \@x{\makebox[0pt][r]{\scriptsize 130\hspace{1em}}\@s{40.34} \.{\land} \E\,
+ \@x{\makebox[0pt][r]{\scriptsize 129\hspace{1em}}\@s{40.34} \.{\land} \E\,
  ma\@s{3.23} \.{\in} msgs \.{:} \.{\land} ma . type \.{=}\@w{2a}}%
- \@x{\makebox[0pt][r]{\scriptsize 131\hspace{1em}}\@s{119.40} \.{\land} ma .
+ \@x{\makebox[0pt][r]{\scriptsize 130\hspace{1em}}\@s{119.40} \.{\land} ma .
  bal\@s{5.34} \.{=} m . bal}%
- \@x{\makebox[0pt][r]{\scriptsize 132\hspace{1em}}\@s{119.40} \.{\land} ma .
+ \@x{\makebox[0pt][r]{\scriptsize 131\hspace{1em}}\@s{119.40} \.{\land} ma .
  val\@s{4.82} \.{=} m . val}%
- \@x{\makebox[0pt][r]{\scriptsize 133\hspace{1em}}\@s{40.34} \.{\land} m . bal
+ \@x{\makebox[0pt][r]{\scriptsize 132\hspace{1em}}\@s{40.34} \.{\land} m . bal
  \.{\leq} maxVBal [ m . acc ]}%
-\@x{\makebox[0pt][r]{\scriptsize 134\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 135\hspace{1em}} {\LEMMA} VotedInv
+\@x{\makebox[0pt][r]{\scriptsize 133\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 134\hspace{1em}} {\LEMMA} VotedInv
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 136\hspace{1em}}\@s{43.75} MsgInv \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 135\hspace{1em}}\@s{43.75} MsgInv \.{\land}
  TypeOK \.{\implies}}%
- \@x{\makebox[0pt][r]{\scriptsize 137\hspace{1em}}\@s{60.15} \A\, a \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 136\hspace{1em}}\@s{60.15} \A\, a \.{\in}
  Acceptors ,\, v \.{\in} Values ,\, b \.{\in} Ballots \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 138\hspace{1em}}\@s{71.47} VotedForIn ( a
+ \@x{\makebox[0pt][r]{\scriptsize 137\hspace{1em}}\@s{71.47} VotedForIn ( a
  ,\, v ,\, b ) \.{\implies} SafeAt ( v ,\, b ) \.{\land} b \.{\leq} maxVBal [
  a ]}%
- \@x{\makebox[0pt][r]{\scriptsize 139\hspace{1em}} {\BY} {\DEF} VotedForIn ,\,
- MsgInv ,\, Messages ,\, TypeOK}%
+ \@x{\makebox[0pt][r]{\scriptsize 138\hspace{1em}} {\BY} {\DEF} VotedForIn ,\,
+ Messages ,\, TypeOK ,\, MsgInv}%
+\@y{\@s{0}%
+ only need \ensuremath{\@w{2a}} and \ensuremath{\@w{2b}} cases in
+ \ensuremath{MsgInv
+}}%
+\@xx{}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 141\hspace{1em}} {\LEMMA} VotedOnce
+ \@x{\makebox[0pt][r]{\scriptsize 140\hspace{1em}} {\LEMMA} VotedOnce
  \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 142\hspace{1em}}\@s{43.75} MsgInv
+\@y{\@s{0}%
+ \ensuremath{OneValuePerBallot} in \ensuremath{Voting} (\ensuremath{TODO}:
+ Where/How/Why is it used\.{?})
+}%
+\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 141\hspace{1em}}\@s{43.75} MsgInv
  \.{\implies}\@s{4.1} \A\, a1 ,\, a2 \.{\in} Acceptors ,\, b \.{\in} Ballots
  ,\, v1 ,\, v2 \.{\in} Values \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 143\hspace{1em}}\@s{107.54} VotedForIn ( a1
+ \@x{\makebox[0pt][r]{\scriptsize 142\hspace{1em}}\@s{107.54} VotedForIn ( a1
  ,\, v1 ,\, b ) \.{\land} VotedForIn ( a2 ,\, v2 ,\, b ) \.{\implies} ( v1
  \.{=} v2 )}%
- \@x{\makebox[0pt][r]{\scriptsize 144\hspace{1em}} {\BY} {\DEF} MsgInv ,\,
- VotedForIn}%
+ \@x{\makebox[0pt][r]{\scriptsize 143\hspace{1em}} {\BY} {\DEF} VotedForIn ,\,
+ MsgInv}%
+\@y{\@s{0}%
+ only need \ensuremath{\@w{2a}} and \ensuremath{\@w{2b}} cases in
+ \ensuremath{MsgInv
+}}%
+\@xx{}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 146\hspace{1em}} AccInv \.{\defeq}}%
- \@x{\makebox[0pt][r]{\scriptsize 147\hspace{1em}}\@s{8.2} \A\, a \.{\in}
+\@x{\makebox[0pt][r]{\scriptsize 145\hspace{1em}} AccInv \.{\defeq}}%
+ \@x{\makebox[0pt][r]{\scriptsize 146\hspace{1em}}\@s{8.2} \A\, a \.{\in}
  Acceptors \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 148\hspace{1em}}\@s{16.4} \.{\land} ( maxVal
+ \@x{\makebox[0pt][r]{\scriptsize 147\hspace{1em}}\@s{16.4} \.{\land} ( maxVal
  [ a ]\@s{3.91} \.{=} None ) \.{\equiv} ( maxVBal [ a ] \.{=} \.{-} 1 )}%
- \@x{\makebox[0pt][r]{\scriptsize 149\hspace{1em}}\@s{16.4} \.{\land} maxVBal
+ \@x{\makebox[0pt][r]{\scriptsize 148\hspace{1em}}\@s{16.4} \.{\land} maxVBal
  [ a ] \.{\leq} maxBal [ a ]}%
-\@x{\makebox[0pt][r]{\scriptsize 150\hspace{1em}}\@s{16.4}}%
+\@x{\makebox[0pt][r]{\scriptsize 149\hspace{1em}}\@s{16.4}}%
 \@y{\@s{0}%
  conjunct strengthened corresponding to \ensuremath{MsgInv} 2014/04/02 sm
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 151\hspace{1em}}\@s{16.4} \.{\land} (
+ \@x{\makebox[0pt][r]{\scriptsize 150\hspace{1em}}\@s{16.4} \.{\land} (
  maxVBal [ a ] \.{\geq} 0 ) \.{\implies} VotedForIn ( a ,\, maxVal [ a ] ,\,
  maxVBal [ a ] )\@s{4.1}}%
 \@y{\@s{0}%
  \ensuremath{SafeAt(maxVal[a],\, maxVBal[a])
 }}%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 152\hspace{1em}}\@s{16.4}}%
+\@x{\makebox[0pt][r]{\scriptsize 151\hspace{1em}}\@s{16.4}}%
 \@y{\@s{0}%
  conjunct added corresponding to \ensuremath{MsgInv} 2014/03/29 sm
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 153\hspace{1em}}\@s{16.4} \.{\land} \A\, c
+ \@x{\makebox[0pt][r]{\scriptsize 152\hspace{1em}}\@s{16.4} \.{\land} \A\, c
  \.{\in} Ballots \.{:} c \.{>} maxVBal [ a ] \.{\implies} {\lnot} \E\, v
  \.{\in} Values \.{:} VotedForIn ( a ,\, v ,\, c )}%
-\@x{\makebox[0pt][r]{\scriptsize 154\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 155\hspace{1em}} Inv \.{\defeq} TypeOK
+\@x{\makebox[0pt][r]{\scriptsize 153\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 154\hspace{1em}} Inv \.{\defeq} TypeOK
  \.{\land} MsgInv \.{\land} AccInv}%
-\@x{\makebox[0pt][r]{\scriptsize 156\hspace{1em}}}\midbar\@xx{}%
+\@x{\makebox[0pt][r]{\scriptsize 155\hspace{1em}}}\midbar\@xx{}%
 \begin{lcom}{0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
 The following lemma shows that (the invariant implies that) the
@@ -1275,544 +1288,553 @@ The following lemma shows that (the invariant implies that) the
  remains true throughout the rest of the excecution.
 \end{cpar}%
 \end{lcom}%
- \@x{\makebox[0pt][r]{\scriptsize 162\hspace{1em}} {\LEMMA} SafeAtStable
+ \@x{\makebox[0pt][r]{\scriptsize 161\hspace{1em}} {\LEMMA} SafeAtStable
  \.{\defeq} Inv \.{\land} Next \.{\land} TypeOK \.{'} \.{\implies}}%
- \@x{\makebox[0pt][r]{\scriptsize 163\hspace{1em}}\@s{125.06} \A\, v \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 162\hspace{1em}}\@s{125.06} \A\, v \.{\in}
  Values ,\, b \.{\in} Ballots \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 164\hspace{1em}}\@s{150.25} SafeAt ( v ,\, b
+ \@x{\makebox[0pt][r]{\scriptsize 163\hspace{1em}}\@s{150.25} SafeAt ( v ,\, b
  ) \.{\implies} SafeAt ( v ,\, b ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 165\hspace{1em}}\@pfstepnum{1}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 164\hspace{1em}}\@pfstepnum{1}{}\ 
  {\SUFFICES} {\ASSUME} Inv ,\, Next ,\, TypeOK \.{'} ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 166\hspace{1em}}\@s{98.64} {\NEW} v \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 165\hspace{1em}}\@s{98.64} {\NEW} v \.{\in}
  Values ,\, {\NEW} b \.{\in} Ballots ,\, SafeAt ( v ,\, b )}%
- \@x{\makebox[0pt][r]{\scriptsize 167\hspace{1em}}\@s{60.39} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 166\hspace{1em}}\@s{60.39} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b ) \.{'}}%
-\@x{\makebox[0pt][r]{\scriptsize 168\hspace{1em}}\@s{8.2} {\OBVIOUS}}%
- \@x{\makebox[0pt][r]{\scriptsize 169\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
+\@x{\makebox[0pt][r]{\scriptsize 167\hspace{1em}}\@s{8.2} {\OBVIOUS}}%
+ \@x{\makebox[0pt][r]{\scriptsize 168\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
  {\DEF} Send ,\, Inv ,\, Ballots}%
- \@x{\makebox[0pt][r]{\scriptsize 170\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
+ \@x{\makebox[0pt][r]{\scriptsize 169\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
  {\TRUE} \.{\land} {\TRUE}}%
- \@x{\makebox[0pt][r]{\scriptsize 171\hspace{1em}}\@pfstepnum{1}{1.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 170\hspace{1em}}\@pfstepnum{1}{1.}\ 
  {\ASSUME} {\NEW} bb \.{\in} Ballots ,\, Phase1a ( bb )}%
- \@x{\makebox[0pt][r]{\scriptsize 172\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 171\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 173\hspace{1em}}\@s{8.2}
+ \@x{\makebox[0pt][r]{\scriptsize 172\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\, SMT {\DEF} SafeAt ,\, Phase1a ,\, VotedForIn ,\,
  WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 174\hspace{1em}}\@pfstepnum{1}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 173\hspace{1em}}\@pfstepnum{1}{2.}\ 
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase1b ( a )}%
- \@x{\makebox[0pt][r]{\scriptsize 175\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 174\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 176\hspace{1em}}\@s{8.2}
+ \@x{\makebox[0pt][r]{\scriptsize 175\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{2} ,\, QuorumAssumption ,\, SMTT ( 60 ) {\DEF} TypeOK
  ,\, SafeAt ,\, WontVoteIn ,\, VotedForIn ,\, Phase1b}%
- \@x{\makebox[0pt][r]{\scriptsize 177\hspace{1em}}\@pfstepnum{1}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 176\hspace{1em}}\@pfstepnum{1}{3.}\ 
  {\ASSUME} {\NEW} bb \.{\in} Ballots ,\, Phase2a ( bb )}%
- \@x{\makebox[0pt][r]{\scriptsize 178\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 177\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 179\hspace{1em}}\@s{8.2}
+ \@x{\makebox[0pt][r]{\scriptsize 178\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{3} ,\, QuorumAssumption ,\, SMT {\DEF} TypeOK ,\, SafeAt
  ,\, WontVoteIn ,\, VotedForIn ,\, Phase2a}%
- \@x{\makebox[0pt][r]{\scriptsize 180\hspace{1em}}\@pfstepnum{1}{4.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 179\hspace{1em}}\@pfstepnum{1}{4.}\ 
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase2b ( a )}%
- \@x{\makebox[0pt][r]{\scriptsize 181\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 180\hspace{1em}}\@s{23.88} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 182\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 181\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
  {\PICK} m \.{\in} msgs \.{:} Phase2b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 183\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 182\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{1}{4}\  {\DEF} Phase2b}%
- \@x{\makebox[0pt][r]{\scriptsize 184\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 183\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2}\ 
  \A\, aa \.{\in} Acceptors ,\, bb \.{\in} Ballots ,\, vv \.{\in} Values
  \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 185\hspace{1em}}\@s{44.73} VotedForIn ( aa
+ \@x{\makebox[0pt][r]{\scriptsize 184\hspace{1em}}\@s{44.73} VotedForIn ( aa
  ,\, vv ,\, bb ) \.{\implies} VotedForIn ( aa ,\, vv ,\, bb ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 186\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 185\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1}\  {\DEF} TypeOK ,\, VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 187\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 186\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
  \A\, aa \.{\in} Acceptors ,\, bb \.{\in} Ballots \.{:} maxBal [ aa ] \.{>}
  bb \.{\implies} maxBal \.{'} [ aa ] \.{>} bb}%
- \@x{\makebox[0pt][r]{\scriptsize 188\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 187\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1}\  {\DEF} TypeOK}%
- \@x{\makebox[0pt][r]{\scriptsize 189\hspace{1em}}\@s{8.2}\@pfstepnum{2}{4.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 188\hspace{1em}}\@s{8.2}\@pfstepnum{2}{4.}\ 
  {\ASSUME} {\NEW} aa \.{\in} Acceptors ,\, {\NEW} bb \.{\in} Ballots ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 190\hspace{1em}}\@s{70.33} WontVoteIn ( aa
+ \@x{\makebox[0pt][r]{\scriptsize 189\hspace{1em}}\@s{70.33} WontVoteIn ( aa
  ,\, bb ) ,\, {\NEW} vv \.{\in} Values ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 191\hspace{1em}}\@s{70.33} VotedForIn ( aa
+ \@x{\makebox[0pt][r]{\scriptsize 190\hspace{1em}}\@s{70.33} VotedForIn ( aa
  ,\, vv ,\, bb ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 192\hspace{1em}}\@s{32.08} {\PROVE}
+ \@x{\makebox[0pt][r]{\scriptsize 191\hspace{1em}}\@s{32.08} {\PROVE}
  {\FALSE}}%
- \@x{\makebox[0pt][r]{\scriptsize 193\hspace{1em}}\@s{16.4}\@pfstepnum{3}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 192\hspace{1em}}\@s{16.4}\@pfstepnum{3}{}\ 
  {\DEFINE} mm \.{\defeq} [ type \.{\mapsto}\@w{2b} ,\, val \.{\mapsto} vv ,\,
  bal \.{\mapsto} bb ,\, acc \.{\mapsto} aa ]}%
- \@x{\makebox[0pt][r]{\scriptsize 194\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 193\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
  mm \.{\notin} msgs}%
- \@x{\makebox[0pt][r]{\scriptsize 195\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 194\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{2}{4}\  {\DEF} WontVoteIn ,\, VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 196\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 195\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
  mm \.{\in} msgs \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize
- 197\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} m1 \.{\in} msgs \.{'}
+ 196\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} m1 \.{\in} msgs \.{'}
  \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 198\hspace{1em}}\@s{56.68}
+ \@x{\makebox[0pt][r]{\scriptsize 197\hspace{1em}}\@s{56.68}
  \.{\land}\@s{5.33} m1 . type \.{=}\@w{2b}}%
- \@x{\makebox[0pt][r]{\scriptsize 199\hspace{1em}}\@s{56.68}
+ \@x{\makebox[0pt][r]{\scriptsize 198\hspace{1em}}\@s{56.68}
  \.{\land}\@s{5.33} m1 . val\@s{1.06} \.{=} vv}%
- \@x{\makebox[0pt][r]{\scriptsize 200\hspace{1em}}\@s{56.68}
+ \@x{\makebox[0pt][r]{\scriptsize 199\hspace{1em}}\@s{56.68}
  \.{\land}\@s{5.33} m1 . bal\@s{1.57} \.{=} bb}%
- \@x{\makebox[0pt][r]{\scriptsize 201\hspace{1em}}\@s{56.68}
+ \@x{\makebox[0pt][r]{\scriptsize 200\hspace{1em}}\@s{56.68}
  \.{\land}\@s{5.33} m1 . acc \.{=} aa}%
- \@x{\makebox[0pt][r]{\scriptsize 202\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 201\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{2}{4}\  {\DEF} VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 203\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 202\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}\@s{4.1} {\BY}\@pfstepnum{4}{1}\  {\DEF} TypeOK ,\, Messages}%
 \@y{\@s{0}%
  proved by \ensuremath{Zenon
 }}%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 204\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
+ \@x{\makebox[0pt][r]{\scriptsize 203\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
  aa \.{=} a \.{\land} m . bal \.{=} bb}%
- \@x{\makebox[0pt][r]{\scriptsize 205\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 204\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2}\  {\DEF}
  TypeOK}%
- \@x{\makebox[0pt][r]{\scriptsize 206\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 205\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 207\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 206\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{4} ,\,\@pfstepnum{3}{3}\  {\DEF}
  Phase2b ,\, WontVoteIn ,\, TypeOK}%
- \@x{\makebox[0pt][r]{\scriptsize 208\hspace{1em}}\@s{8.2}\@pfstepnum{2}{5}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 207\hspace{1em}}\@s{8.2}\@pfstepnum{2}{5}\ 
  \A\, aa \.{\in} Acceptors ,\, bb \.{\in} Ballots \.{:} WontVoteIn ( aa ,\,
  bb ) \.{\implies} WontVoteIn ( aa ,\, bb ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 209\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 208\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{3} ,\,\@pfstepnum{2}{4}\  {\DEF} WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 210\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 209\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 211\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 210\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{2} ,\,\@pfstepnum{2}{5} ,\, QuorumAssumption {\DEF}
  SafeAt}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 213\hspace{1em}}\@pfstepnum{1}{5.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 214\hspace{1em}}\@s{8.2}
+\@x{\makebox[0pt][r]{\scriptsize 212\hspace{1em}}\@pfstepnum{1}{5.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 213\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2} ,\,\@pfstepnum{1}{3}
  ,\,\@pfstepnum{1}{4}\  {\DEF} Next}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 216\hspace{1em}} {\THEOREM} Invariant
+ \@x{\makebox[0pt][r]{\scriptsize 215\hspace{1em}} {\THEOREM} Invariant
  \.{\defeq} Spec \.{\implies} {\Box} Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 217\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
+ \@x{\makebox[0pt][r]{\scriptsize 216\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
  {\DEF} Ballots}%
- \@x{\makebox[0pt][r]{\scriptsize 218\hspace{1em}}\@pfstepnum{1}{1.}\  Init
+ \@x{\makebox[0pt][r]{\scriptsize 217\hspace{1em}}\@pfstepnum{1}{1.}\  Init
  \.{\implies} Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 219\hspace{1em}}\@s{8.2} {\BY} {\DEF} Init
+ \@x{\makebox[0pt][r]{\scriptsize 218\hspace{1em}}\@s{8.2} {\BY} {\DEF} Init
  ,\, Inv ,\, TypeOK ,\, AccInv ,\, MsgInv ,\, VotedForIn}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 221\hspace{1em}}\@pfstepnum{1}{2.}\  Inv
+ \@x{\makebox[0pt][r]{\scriptsize 220\hspace{1em}}\@pfstepnum{1}{2.}\  Inv
  \.{\land} [ Next ]_{ vars} \.{\implies} Inv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 222\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 221\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
  {\SUFFICES} {\ASSUME} Inv ,\, Next}%
- \@x{\makebox[0pt][r]{\scriptsize 223\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 222\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
  Inv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 224\hspace{1em}}\@s{16.4} {\BY} {\DEF} vars
+ \@x{\makebox[0pt][r]{\scriptsize 223\hspace{1em}}\@s{16.4} {\BY} {\DEF} vars
  ,\, Inv ,\, TypeOK ,\, MsgInv ,\, AccInv ,\, SafeAt ,\, VotedForIn ,\,
  WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 225\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 224\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
  {\USE} {\DEF} Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 226\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 225\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
  TypeOK \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 227\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 226\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
  {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase1a ( b ) {\PROVE} TypeOK \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 228\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 227\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1}\  {\DEF} TypeOK ,\, Phase1a ,\, Send ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 229\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 228\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
  {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase2a ( b ) {\PROVE} TypeOK \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize
- 230\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} v \.{\in} Values
+ 229\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} v \.{\in} Values
  \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 231\hspace{1em}}\@s{60.78} \.{\land} Send (
+ \@x{\makebox[0pt][r]{\scriptsize 230\hspace{1em}}\@s{60.78} \.{\land} Send (
  [ type \.{\mapsto}\@w{2a} ,\, bal \.{\mapsto} b ,\, val \.{\mapsto} v ] )}%
- \@x{\makebox[0pt][r]{\scriptsize 232\hspace{1em}}\@s{60.78} \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 231\hspace{1em}}\@s{60.78} \.{\land}
  {\UNCHANGED} {\langle} maxBal ,\, maxVBal ,\, maxVal {\rangle}}%
- \@x{\makebox[0pt][r]{\scriptsize 233\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 232\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{2}\  {\DEF} Phase2a}%
- \@x{\makebox[0pt][r]{\scriptsize 234\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 233\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 235\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 234\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1}\  {\DEF} TypeOK ,\, Send ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 236\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
+ \@x{\makebox[0pt][r]{\scriptsize 235\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase1b ( a ) {\PROVE} TypeOK
  \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 237\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 236\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\PICK} m \.{\in} msgs \.{:} Phase1b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 238\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 237\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{3}\  {\DEF} Phase1b}%
- \@x{\makebox[0pt][r]{\scriptsize 239\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 238\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 240\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
+ \@x{\makebox[0pt][r]{\scriptsize 239\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
  ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 241\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
+ \@x{\makebox[0pt][r]{\scriptsize 240\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase2b ( a ) {\PROVE} TypeOK
  \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 242\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 241\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\PICK} m \.{\in} msgs \.{:} Phase2b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 243\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 242\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{4}\  {\DEF} Phase2b}%
- \@x{\makebox[0pt][r]{\scriptsize 244\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 243\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 245\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
+ \@x{\makebox[0pt][r]{\scriptsize 244\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
  ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 246\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 245\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 247\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 246\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2} ,\,\@pfstepnum{3}{3}
  ,\,\@pfstepnum{3}{4}\  {\DEF} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 248\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 247\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
  AccInv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 249\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
- {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase1a ( b ) {\PROVE} AccInv \.{'}}%
+ \@x{\makebox[0pt][r]{\scriptsize 248\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase1a ( b )}%
+ \@x{\makebox[0pt][r]{\scriptsize 249\hspace{1em}}\@s{40.28} {\PROVE} AccInv
+ \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize 250\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{3}{1} ,\, SafeAtStable {\DEF} AccInv
  ,\, TypeOK ,\, Phase1a ,\, VotedForIn ,\, Send}%
  \@x{\makebox[0pt][r]{\scriptsize 251\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
- {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase2a ( b ) {\PROVE} AccInv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 252\hspace{1em}}\@s{32.8}
+ {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase2a ( b )}%
+ \@x{\makebox[0pt][r]{\scriptsize 252\hspace{1em}}\@s{40.28} {\PROVE} AccInv
+ \.{'}}%
+ \@x{\makebox[0pt][r]{\scriptsize 253\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{3}{2} ,\, SafeAtStable {\DEF} AccInv
  ,\, TypeOK ,\, Phase2a ,\, VotedForIn ,\, Send}%
- \@x{\makebox[0pt][r]{\scriptsize 253\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
- {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase1b ( a ) {\PROVE} AccInv
+ \@x{\makebox[0pt][r]{\scriptsize 254\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
+ {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase1b ( a )}%
+ \@x{\makebox[0pt][r]{\scriptsize 255\hspace{1em}}\@s{40.28} {\PROVE} AccInv
  \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 254\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 256\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{3}{3} ,\, SafeAtStable {\DEF} AccInv
  ,\, TypeOK ,\, Phase1b ,\, VotedForIn ,\, Send}%
- \@x{\makebox[0pt][r]{\scriptsize 255\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
- {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase2b ( a ) {\PROVE} AccInv
+ \@x{\makebox[0pt][r]{\scriptsize 257\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
+ {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase2b ( a )}%
+ \@x{\makebox[0pt][r]{\scriptsize 258\hspace{1em}}\@s{40.28} {\PROVE} AccInv
  \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize
- 256\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} m \.{\in} msgs \.{:}
+ 259\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\PICK} m \.{\in} msgs \.{:}
  Phase2b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 257\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 260\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{4}\  {\DEF} Phase2b}%
  \@x{\makebox[0pt][r]{\scriptsize
- 258\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  \A\, acc \.{\in} Acceptors
+ 261\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  \A\, acc \.{\in} Acceptors
  \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 259\hspace{1em}}\@s{55.71} \.{\land} maxVal
+ \@x{\makebox[0pt][r]{\scriptsize 262\hspace{1em}}\@s{55.71} \.{\land} maxVal
  \.{'} [ acc ] \.{=} None \.{\equiv} maxVBal \.{'} [ acc ] \.{=} \.{-} 1}%
- \@x{\makebox[0pt][r]{\scriptsize 260\hspace{1em}}\@s{55.71} \.{\land} maxVBal
+ \@x{\makebox[0pt][r]{\scriptsize 263\hspace{1em}}\@s{55.71} \.{\land} maxVBal
  \.{'} [ acc ] \.{\leq} maxBal \.{'} [ acc ]}%
- \@x{\makebox[0pt][r]{\scriptsize 261\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 264\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{4}{1} ,\, NoneNotAValue {\DEF} AccInv
  ,\, TypeOK ,\, Messages}%
  \@x{\makebox[0pt][r]{\scriptsize
- 262\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}\  \A\, aa ,\, vv ,\, bb \.{:}
+ 265\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}\  \A\, aa ,\, vv ,\, bb \.{:}
  VotedForIn ( aa ,\, vv ,\, bb ) \.{'} \.{\equiv}}%
- \@x{\makebox[0pt][r]{\scriptsize 263\hspace{1em}}\@s{107.36} VotedForIn ( aa
+ \@x{\makebox[0pt][r]{\scriptsize 266\hspace{1em}}\@s{107.36} VotedForIn ( aa
  ,\, vv ,\, bb ) \.{\lor} ( aa \.{=} a \.{\land} vv \.{=} maxVal \.{'} [ a ]
  \.{\land} bb \.{=} maxVBal \.{'} [ a ] )}%
- \@x{\makebox[0pt][r]{\scriptsize 264\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 267\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\, Isa {\DEF} VotedForIn ,\, Send ,\, TypeOK ,\,
  Messages}%
  \@x{\makebox[0pt][r]{\scriptsize
- 265\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  {\ASSUME} {\NEW} acc \.{\in}
+ 268\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  {\ASSUME} {\NEW} acc \.{\in}
  Acceptors ,\, maxVBal \.{'} [ acc ] \.{\geq} 0}%
- \@x{\makebox[0pt][r]{\scriptsize 266\hspace{1em}}\@s{48.48} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 269\hspace{1em}}\@s{48.48} {\PROVE}\@s{4.1}
  VotedForIn ( acc ,\, maxVal [ acc ] ,\, maxVBal [ acc ] ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 267\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 270\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\,\@pfstepnum{4}{3} ,\,\@pfstepnum{4}{4}\  {\DEF}
  AccInv ,\, TypeOK}%
  \@x{\makebox[0pt][r]{\scriptsize
- 268\hspace{1em}}\@s{24.59}\@pfstepnum{4}{5.}\  {\ASSUME} {\NEW} acc \.{\in}
+ 271\hspace{1em}}\@s{24.59}\@pfstepnum{4}{5.}\  {\ASSUME} {\NEW} acc \.{\in}
  Acceptors ,\, {\NEW} c \.{\in} Ballots ,\, c \.{>} maxVBal \.{'} [ acc ]
  ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 269\hspace{1em}}\@s{86.73} {\NEW} v \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 272\hspace{1em}}\@s{86.73} {\NEW} v \.{\in}
  Values ,\, VotedForIn ( acc ,\, v ,\, c ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 270\hspace{1em}}\@s{48.48} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 273\hspace{1em}}\@s{48.48} {\PROVE}\@s{4.1}
  {\FALSE}}%
- \@x{\makebox[0pt][r]{\scriptsize 271\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 274\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\,\@pfstepnum{4}{3} ,\,\@pfstepnum{4}{5}
  ,\,\@pfstepnum{2}{1}\  {\DEF} AccInv ,\, TypeOK}%
- \@x{\makebox[0pt][r]{\scriptsize 272\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
- {\QED}\@s{4.1} {\BY}\@pfstepnum{4}{2} ,\,\@pfstepnum{4}{4}
- ,\,\@pfstepnum{4}{5}\  {\DEF} AccInv}%
- \@x{\makebox[0pt][r]{\scriptsize 273\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 275\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 274\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 276\hspace{1em}}\@s{32.8}
+ {\BY}\@pfstepnum{4}{2} ,\,\@pfstepnum{4}{4} ,\,\@pfstepnum{4}{5}\  {\DEF}
+ AccInv}%
+ \@x{\makebox[0pt][r]{\scriptsize 277\hspace{1em}}\@s{16.4}\@pfstepnum{3}{} .
+ {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 278\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2} ,\,\@pfstepnum{3}{3}
  ,\,\@pfstepnum{3}{4}\  {\DEF} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 275\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 279\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
  MsgInv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 276\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 280\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
  {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase1a ( b )}%
- \@x{\makebox[0pt][r]{\scriptsize 277\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 281\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
  MsgInv \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize
- 278\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
+ 282\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
  VotedForIn ( aa ,\, vv ,\, bb ) \.{'} \.{\equiv} VotedForIn ( aa ,\, vv ,\,
  bb )}%
- \@x{\makebox[0pt][r]{\scriptsize 279\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 283\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{1}\  {\DEF} Phase1a ,\, Send ,\, VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 280\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 284\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 281\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 285\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{4}{1} ,\, SafeAtStable
  ,\,\@pfstepnum{2}{1}\  {\DEF} Phase1a ,\, MsgInv ,\, TypeOK ,\, Messages ,\,
  Send}%
- \@x{\makebox[0pt][r]{\scriptsize 282\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 286\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase1b ( a )}%
- \@x{\makebox[0pt][r]{\scriptsize 283\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 287\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
  MsgInv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 284\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 288\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\PICK} m \.{\in} msgs \.{:} Phase1b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 285\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 289\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{2}\  {\DEF} Phase1b}%
  \@x{\makebox[0pt][r]{\scriptsize
- 286\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
+ 290\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
  VotedForIn ( aa ,\, vv ,\, bb ) \.{'} \.{\equiv} VotedForIn ( aa ,\, vv ,\,
  bb )}%
- \@x{\makebox[0pt][r]{\scriptsize 287\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
+ \@x{\makebox[0pt][r]{\scriptsize 291\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
  ,\, VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 288\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
- {\DEFINE} mm \.{\defeq} [ type \.{\mapsto}\@w{1b} ,\, bal \.{\mapsto} m .
- bal ,\, maxVBal \.{\mapsto} maxVBal [ a ] ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 289\hspace{1em}}\@s{114.63} maxVal
+ \@x{\makebox[0pt][r]{\scriptsize 292\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ {\DEFINE} mm \.{\defeq} [ type\@s{1.69} \.{\mapsto}\@w{1b} ,\, bal
+ \.{\mapsto} m . bal ,\, maxVBal \.{\mapsto} maxVBal [ a ] ,\,}%
+ \@x{\makebox[0pt][r]{\scriptsize 293\hspace{1em}}\@s{101.16} maxVal
  \.{\mapsto} maxVal [ a ] ,\, acc \.{\mapsto} a ]}%
  \@x{\makebox[0pt][r]{\scriptsize
- 290\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  mm . bal \.{\leq} maxBal
+ 294\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  mm . bal \.{\leq} maxBal
  \.{'} [ mm . acc ]}%
- \@x{\makebox[0pt][r]{\scriptsize 291\hspace{1em}}\@s{32.8} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 295\hspace{1em}}\@s{32.8} {\BY} {\DEF}
  TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 292\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}
+ \@x{\makebox[0pt][r]{\scriptsize 296\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}
  \.{\lor} \.{\land} mm . maxVal \.{\in} Values}%
- \@x{\makebox[0pt][r]{\scriptsize 293\hspace{1em}}\@s{56.26} \.{\land} mm .
+ \@x{\makebox[0pt][r]{\scriptsize 297\hspace{1em}}\@s{56.26} \.{\land} mm .
  maxVBal \.{\in} Ballots}%
- \@x{\makebox[0pt][r]{\scriptsize 294\hspace{1em}}\@s{56.26} \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 298\hspace{1em}}\@s{56.26} \.{\land}
  VotedForIn ( mm . acc ,\, mm . maxVal ,\, mm . maxVBal )}%
- \@x{\makebox[0pt][r]{\scriptsize 295\hspace{1em}}\@s{45.15} \.{\lor}
+ \@x{\makebox[0pt][r]{\scriptsize 299\hspace{1em}}\@s{45.15} \.{\lor}
  \.{\land} mm . maxVal \.{=} None}%
- \@x{\makebox[0pt][r]{\scriptsize 296\hspace{1em}}\@s{56.26} \.{\land} mm .
+ \@x{\makebox[0pt][r]{\scriptsize 300\hspace{1em}}\@s{56.26} \.{\land} mm .
  maxVBal \.{=} \.{-} 1}%
- \@x{\makebox[0pt][r]{\scriptsize 297\hspace{1em}}\@s{32.8} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 301\hspace{1em}}\@s{32.8} {\BY} {\DEF}
  TypeOK ,\, AccInv}%
  \@x{\makebox[0pt][r]{\scriptsize
- 298\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  \A\, c \.{\in} ( mm . maxVBal
+ 302\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  \A\, c \.{\in} ( mm . maxVBal
  \.{+} 1 ) \.{\dotdot} ( mm . bal \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 299\hspace{1em}}\@s{59.81} {\lnot} \E\, v
+ \@x{\makebox[0pt][r]{\scriptsize 303\hspace{1em}}\@s{59.81} {\lnot} \E\, v
  \.{\in} Values \.{:} VotedForIn ( mm . acc ,\, v ,\, c )}%
- \@x{\makebox[0pt][r]{\scriptsize 300\hspace{1em}}\@s{32.8} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 304\hspace{1em}}\@s{32.8} {\BY} {\DEF}
  AccInv ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 301\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 305\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 302\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 306\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\,\@pfstepnum{4}{2} ,\,\@pfstepnum{4}{3}
  ,\,\@pfstepnum{4}{4} ,\, SafeAtStable {\DEF} MsgInv ,\, TypeOK ,\, Messages
  ,\, Send}%
- \@x{\makebox[0pt][r]{\scriptsize 303\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
+ \@x{\makebox[0pt][r]{\scriptsize 307\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
  {\ASSUME} {\NEW} b \.{\in} Ballots ,\, Phase2a ( b )}%
- \@x{\makebox[0pt][r]{\scriptsize 304\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 308\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
  MsgInv \.{'}}%
  \@x{\makebox[0pt][r]{\scriptsize
- 305\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\lnot} \E\, m \.{\in} msgs
+ 309\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  {\lnot} \E\, m \.{\in} msgs
  \.{:} ( m . type \.{=}\@w{2a} ) \.{\land} ( m . bal \.{=} b )}%
- \@x{\makebox[0pt][r]{\scriptsize 306\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 310\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{3}\  {\DEF} Phase2a}%
  \@x{\makebox[0pt][r]{\scriptsize
- 307\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1a.}\  {\UNCHANGED} {\langle}
+ 311\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1a.}\  {\UNCHANGED} {\langle}
  maxBal ,\, maxVBal ,\, maxVal {\rangle}}%
- \@x{\makebox[0pt][r]{\scriptsize 308\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 312\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{3}\  {\DEF} Phase2a}%
  \@x{\makebox[0pt][r]{\scriptsize
- 309\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  {\PICK} v \.{\in} Values
+ 313\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  {\PICK} v \.{\in} Values
  \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 310\hspace{1em}}\@s{60.78} \.{\land} \E\, Q
+ \@x{\makebox[0pt][r]{\scriptsize 314\hspace{1em}}\@s{60.78} \.{\land} \E\, Q
  \.{\in} Quorums \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 311\hspace{1em}}\@s{79.12} \E\, S \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 315\hspace{1em}}\@s{79.12} \E\, S \.{\in}
  {\SUBSET} \{ m \.{\in} msgs \.{:} ( m . type \.{=}\@w{1b} ) \.{\land} ( m .
  bal \.{=} b ) \} \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 312\hspace{1em}}\@s{86.34} \.{\land} \A\, a
+ \@x{\makebox[0pt][r]{\scriptsize 316\hspace{1em}}\@s{86.34} \.{\land} \A\, a
  \.{\in} Q \.{:} \E\, m \.{\in} S \.{:} m . acc\@s{22.41} \.{=} a}%
- \@x{\makebox[0pt][r]{\scriptsize 313\hspace{1em}}\@s{86.34} \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 317\hspace{1em}}\@s{86.34} \.{\land}
  \.{\lor} \A\, m \.{\in} S \.{:} m . maxVBal \.{=} \.{-} 1}%
- \@x{\makebox[0pt][r]{\scriptsize 314\hspace{1em}}\@s{97.45} \.{\lor} \E\,
+ \@x{\makebox[0pt][r]{\scriptsize 318\hspace{1em}}\@s{97.45} \.{\lor} \E\,
  c\@s{3.77} \.{\in} 0 \.{\dotdot} ( b \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 315\hspace{1em}}\@s{115.78} \.{\land} \A\, m
+ \@x{\makebox[0pt][r]{\scriptsize 319\hspace{1em}}\@s{115.78} \.{\land} \A\, m
  \.{\in} S \.{:} m . maxVBal \.{\leq} c}%
- \@x{\makebox[0pt][r]{\scriptsize 316\hspace{1em}}\@s{115.78} \.{\land} \E\, m
+ \@x{\makebox[0pt][r]{\scriptsize 320\hspace{1em}}\@s{115.78} \.{\land} \E\, m
  \.{\in} S \.{:} \.{\land} m . maxVBal \.{=} c}%
- \@x{\makebox[0pt][r]{\scriptsize 317\hspace{1em}}\@s{171.55} \.{\land} m .
+ \@x{\makebox[0pt][r]{\scriptsize 321\hspace{1em}}\@s{171.55} \.{\land} m .
  maxVal \.{=} v}%
- \@x{\makebox[0pt][r]{\scriptsize 318\hspace{1em}}\@s{60.78} \.{\land} Send (
+ \@x{\makebox[0pt][r]{\scriptsize 322\hspace{1em}}\@s{60.78} \.{\land} Send (
  [ type \.{\mapsto}\@w{2a} ,\, bal \.{\mapsto} b ,\, val \.{\mapsto} v ] )}%
- \@x{\makebox[0pt][r]{\scriptsize 319\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 323\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{3}\  {\DEF} Phase2a}%
- \@x{\makebox[0pt][r]{\scriptsize 320\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 324\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\DEFINE} mm \.{\defeq} [ type \.{\mapsto}\@w{2a} ,\, bal \.{\mapsto} b ,\,
  val \.{\mapsto} v ]}%
  \@x{\makebox[0pt][r]{\scriptsize
- 321\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}\  msgs \.{'} \.{=} msgs
+ 325\hspace{1em}}\@s{24.59}\@pfstepnum{4}{3.}\  msgs \.{'} \.{=} msgs
  \.{\cup} \{ mm \}}%
- \@x{\makebox[0pt][r]{\scriptsize 322\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 326\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{2}\  {\DEF} Send}%
  \@x{\makebox[0pt][r]{\scriptsize
- 323\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  \A\, aa ,\, vv ,\, bb \.{:}
+ 327\hspace{1em}}\@s{24.59}\@pfstepnum{4}{4.}\  \A\, aa ,\, vv ,\, bb \.{:}
  VotedForIn ( aa ,\, vv ,\, bb ) \.{'} \.{\equiv} VotedForIn ( aa ,\, vv ,\,
  bb )}%
- \@x{\makebox[0pt][r]{\scriptsize 324\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 328\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{3}\  {\DEF} VotedForIn}%
  \@x{\makebox[0pt][r]{\scriptsize
- 325\hspace{1em}}\@s{24.59}\@pfstepnum{4}{6.}\  \A\, m ,\, ma \.{\in} msgs
+ 329\hspace{1em}}\@s{24.59}\@pfstepnum{4}{6.}\  \A\, m ,\, ma \.{\in} msgs
  \.{'} \.{:} m . type \.{=}\@w{2a} \.{\land} ma . type \.{=}\@w{2a} \.{\land}
  ma . bal \.{=} m . bal}%
- \@x{\makebox[0pt][r]{\scriptsize 326\hspace{1em}}\@s{131.07} \.{\implies} ma
+ \@x{\makebox[0pt][r]{\scriptsize 330\hspace{1em}}\@s{131.07} \.{\implies} ma
  \.{=} m}%
- \@x{\makebox[0pt][r]{\scriptsize 327\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 331\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\,\@pfstepnum{4}{3} ,\, Isa {\DEF} MsgInv}%
  \@x{\makebox[0pt][r]{\scriptsize
- 328\hspace{1em}}\@s{24.59}\@pfstepnum{4}{10.}\  SafeAt ( v ,\, b )}%
- \@x{\makebox[0pt][r]{\scriptsize 329\hspace{1em}}\@s{32.8}\@pfstepnum{5}{0.}\
+ 332\hspace{1em}}\@s{24.59}\@pfstepnum{4}{10.}\  SafeAt ( v ,\, b )}%
+ \@x{\makebox[0pt][r]{\scriptsize 333\hspace{1em}}\@s{32.8}\@pfstepnum{5}{0.}\
  {\PICK} Q \.{\in} Quorums ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 330\hspace{1em}}\@s{81.33} S\@s{1.78}
+ \@x{\makebox[0pt][r]{\scriptsize 334\hspace{1em}}\@s{81.33} S\@s{1.78}
  \.{\in} {\SUBSET} \{ m \.{\in} msgs \.{:} ( m . type \.{=}\@w{1b} )
  \.{\land} ( m . bal \.{=} b ) \} \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 331\hspace{1em}}\@s{89.94} \.{\land} \A\, a
+ \@x{\makebox[0pt][r]{\scriptsize 335\hspace{1em}}\@s{89.94} \.{\land} \A\, a
  \.{\in} Q \.{:} \E\, m \.{\in} S \.{:} m . acc \.{=} a}%
- \@x{\makebox[0pt][r]{\scriptsize 332\hspace{1em}}\@s{89.94} \.{\land}
+ \@x{\makebox[0pt][r]{\scriptsize 336\hspace{1em}}\@s{89.94} \.{\land}
  \.{\lor} \A\, m \.{\in} S \.{:} m . maxVBal \.{=} \.{-} 1}%
- \@x{\makebox[0pt][r]{\scriptsize 333\hspace{1em}}\@s{101.05} \.{\lor} \E\,
+ \@x{\makebox[0pt][r]{\scriptsize 337\hspace{1em}}\@s{101.05} \.{\lor} \E\,
  c\@s{3.77} \.{\in} 0 \.{\dotdot} ( b \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 334\hspace{1em}}\@s{119.38} \.{\land} \A\, m
+ \@x{\makebox[0pt][r]{\scriptsize 338\hspace{1em}}\@s{119.38} \.{\land} \A\, m
  \.{\in} S \.{:} m . maxVBal \.{\leq} c}%
- \@x{\makebox[0pt][r]{\scriptsize 335\hspace{1em}}\@s{119.38} \.{\land} \E\, m
+ \@x{\makebox[0pt][r]{\scriptsize 339\hspace{1em}}\@s{119.38} \.{\land} \E\, m
  \.{\in} S \.{:} \.{\land} m . maxVBal \.{=} c}%
- \@x{\makebox[0pt][r]{\scriptsize 336\hspace{1em}}\@s{175.14} \.{\land} m .
+ \@x{\makebox[0pt][r]{\scriptsize 340\hspace{1em}}\@s{175.14} \.{\land} m .
  maxVal \.{=} v}%
- \@x{\makebox[0pt][r]{\scriptsize 337\hspace{1em}}\@s{41.0}
+ \@x{\makebox[0pt][r]{\scriptsize 341\hspace{1em}}\@s{41.0}
  {\BY}\@pfstepnum{4}{2} ,\, Zenon}%
- \@x{\makebox[0pt][r]{\scriptsize 338\hspace{1em}}\@s{32.8}\@pfstepnum{5}{1.}
+ \@x{\makebox[0pt][r]{\scriptsize 342\hspace{1em}}\@s{32.8}\@pfstepnum{5}{1.}
  {\CASE} \A\, m \.{\in} S \.{:} m . maxVBal \.{=} \.{-} 1}%
-\@x{\makebox[0pt][r]{\scriptsize 339\hspace{1em}}\@s{41.0}}%
+\@x{\makebox[0pt][r]{\scriptsize 343\hspace{1em}}\@s{41.0}}%
 \@y{\@s{0}%
  In that case, no acceptor in \ensuremath{Q} voted in any ballot less than
  \ensuremath{b},
 }%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 340\hspace{1em}}\@s{41.0}}%
+\@x{\makebox[0pt][r]{\scriptsize 344\hspace{1em}}\@s{41.0}}%
 \@y{\@s{0}%
  by the last conjunct of \ensuremath{MsgInv} for type \ensuremath{\@w{1b}}
  messages, and that\mbox{'}s enough
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 341\hspace{1em}}\@s{41.0}
+ \@x{\makebox[0pt][r]{\scriptsize 345\hspace{1em}}\@s{41.0}
  {\BY}\@pfstepnum{5}{1} ,\,\@pfstepnum{5}{0}\  {\DEF} TypeOK ,\, MsgInv ,\,
  SafeAt ,\, WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 342\hspace{1em}}\@s{32.8}\@pfstepnum{5}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 346\hspace{1em}}\@s{32.8}\@pfstepnum{5}{2.}\
  {\ASSUME} {\NEW} c \.{\in} 0 \.{\dotdot} ( b \.{-} 1 ) ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 343\hspace{1em}}\@s{94.93} \A\, m \.{\in} S
+ \@x{\makebox[0pt][r]{\scriptsize 347\hspace{1em}}\@s{94.93} \A\, m \.{\in} S
  \.{:} m . maxVBal \.{\leq} c ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 344\hspace{1em}}\@s{94.93} {\NEW} ma \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 348\hspace{1em}}\@s{94.93} {\NEW} ma \.{\in}
  S ,\, ma . maxVBal \.{=} c ,\, ma . maxVal \.{=} v}%
- \@x{\makebox[0pt][r]{\scriptsize 345\hspace{1em}}\@s{56.68} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 349\hspace{1em}}\@s{56.68} {\PROVE}\@s{4.1}
  SafeAt ( v ,\, b )}%
- \@x{\makebox[0pt][r]{\scriptsize 346\hspace{1em}}\@s{41.0}\@pfstepnum{6}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 350\hspace{1em}}\@s{41.0}\@pfstepnum{6}{} .
  {\SUFFICES} {\ASSUME} {\NEW} d \.{\in} 0 \.{\dotdot} ( b \.{-} 1 )}%
- \@x{\makebox[0pt][r]{\scriptsize 347\hspace{1em}}\@s{100.84} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 351\hspace{1em}}\@s{100.84} {\PROVE}\@s{4.1}
  \E\, QQ\@s{6.49} \.{\in} Quorums \.{:} \A\, q \.{\in} QQ \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 348\hspace{1em}}\@s{146.31} VotedForIn ( q
+ \@x{\makebox[0pt][r]{\scriptsize 352\hspace{1em}}\@s{146.31} VotedForIn ( q
  ,\, v ,\, d ) \.{\lor} WontVoteIn ( q ,\, d )}%
- \@x{\makebox[0pt][r]{\scriptsize 349\hspace{1em}}\@s{49.2} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 353\hspace{1em}}\@s{49.2} {\BY} {\DEF}
  SafeAt}%
- \@x{\makebox[0pt][r]{\scriptsize 350\hspace{1em}}\@s{41.0}\@pfstepnum{6}{1.}
+ \@x{\makebox[0pt][r]{\scriptsize 354\hspace{1em}}\@s{41.0}\@pfstepnum{6}{1.}
  {\CASE} d \.{\in} 0 \.{\dotdot} ( c \.{-} 1 )}%
-\@x{\makebox[0pt][r]{\scriptsize 351\hspace{1em}}\@s{49.2}}%
+\@x{\makebox[0pt][r]{\scriptsize 355\hspace{1em}}\@s{49.2}}%
 \@y{\@s{0}%
  The \ensuremath{\@w{1b}} message for \ensuremath{v} with
  \ensuremath{maxVBal} value \ensuremath{c} must have been safe
 }%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 352\hspace{1em}}\@s{49.2}}%
+\@x{\makebox[0pt][r]{\scriptsize 356\hspace{1em}}\@s{49.2}}%
 \@y{\@s{0}%
  according to \ensuremath{MsgInv} for \ensuremath{\@w{1b}} messages and lemma
  \ensuremath{VotedInv},
 }%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 353\hspace{1em}}\@s{49.2}}%
+\@x{\makebox[0pt][r]{\scriptsize 357\hspace{1em}}\@s{49.2}}%
 \@y{\@s{0}%
  and that proves the assertion
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 354\hspace{1em}}\@s{49.2}
+ \@x{\makebox[0pt][r]{\scriptsize 358\hspace{1em}}\@s{49.2}
  {\BY}\@pfstepnum{5}{2} ,\,\@pfstepnum{6}{1} ,\, VotedInv {\DEF} SafeAt ,\,
  MsgInv ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 355\hspace{1em}}\@s{41.0}\@pfstepnum{6}{2.}
+ \@x{\makebox[0pt][r]{\scriptsize 359\hspace{1em}}\@s{41.0}\@pfstepnum{6}{2.}
  {\CASE} d \.{=} c}%
- \@x{\makebox[0pt][r]{\scriptsize 356\hspace{1em}}\@s{49.2}\@pfstepnum{7}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 360\hspace{1em}}\@s{49.2}\@pfstepnum{7}{1.}\
  VotedForIn ( ma . acc ,\, v ,\, c )}%
- \@x{\makebox[0pt][r]{\scriptsize 357\hspace{1em}}\@s{57.4}
+ \@x{\makebox[0pt][r]{\scriptsize 361\hspace{1em}}\@s{57.4}
  {\BY}\@pfstepnum{5}{2}\  {\DEF} MsgInv}%
- \@x{\makebox[0pt][r]{\scriptsize 358\hspace{1em}}\@s{49.2}\@pfstepnum{7}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 362\hspace{1em}}\@s{49.2}\@pfstepnum{7}{2.}\
  \A\, q \.{\in} Q ,\, w \.{\in} Values \.{:} VotedForIn ( q ,\, w ,\, c )
  \.{\implies} w \.{=} v}%
- \@x{\makebox[0pt][r]{\scriptsize 359\hspace{1em}}\@s{57.4}
+ \@x{\makebox[0pt][r]{\scriptsize 363\hspace{1em}}\@s{57.4}
  {\BY}\@pfstepnum{7}{1} ,\, VotedOnce ,\, QuorumAssumption {\DEF} TypeOK ,\,
  Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 360\hspace{1em}}\@s{49.2}\@pfstepnum{7}{3.}\
+ \@x{\makebox[0pt][r]{\scriptsize 364\hspace{1em}}\@s{49.2}\@pfstepnum{7}{3.}\
  \A\, q \.{\in} Q \.{:} maxBal [ q ] \.{>} c}%
- \@x{\makebox[0pt][r]{\scriptsize 361\hspace{1em}}\@s{57.4}
+ \@x{\makebox[0pt][r]{\scriptsize 365\hspace{1em}}\@s{57.4}
  {\BY}\@pfstepnum{5}{0}\  {\DEF} MsgInv ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 362\hspace{1em}}\@s{49.2}\@pfstepnum{7}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 366\hspace{1em}}\@s{49.2}\@pfstepnum{7}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 363\hspace{1em}}\@s{57.4}
+ \@x{\makebox[0pt][r]{\scriptsize 367\hspace{1em}}\@s{57.4}
  {\BY}\@pfstepnum{6}{2} ,\,\@pfstepnum{7}{2} ,\,\@pfstepnum{7}{3}\  {\DEF}
  WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 364\hspace{1em}}\@s{41.0}\@pfstepnum{6}{3.}
+ \@x{\makebox[0pt][r]{\scriptsize 368\hspace{1em}}\@s{41.0}\@pfstepnum{6}{3.}
  {\CASE} d \.{\in} ( c \.{+} 1 ) \.{\dotdot} ( b \.{-} 1 )}%
-\@x{\makebox[0pt][r]{\scriptsize 365\hspace{1em}}\@s{49.2}}%
+\@x{\makebox[0pt][r]{\scriptsize 369\hspace{1em}}\@s{49.2}}%
 \@y{\@s{0}%
  By the last conjunct of \ensuremath{MsgInv} for type \ensuremath{\@w{1b}}
  messages, no acceptor in \ensuremath{Q
 }}%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 366\hspace{1em}}\@s{49.2}}%
+\@x{\makebox[0pt][r]{\scriptsize 370\hspace{1em}}\@s{49.2}}%
 \@y{\@s{0}%
  voted at any of these ballots.
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 367\hspace{1em}}\@s{49.2}
+ \@x{\makebox[0pt][r]{\scriptsize 371\hspace{1em}}\@s{49.2}
  {\BY}\@pfstepnum{6}{3} ,\,\@pfstepnum{5}{0} ,\,\@pfstepnum{5}{2}\  {\DEF}
  MsgInv ,\, TypeOK ,\, Messages ,\, WontVoteIn}%
- \@x{\makebox[0pt][r]{\scriptsize 368\hspace{1em}}\@s{41.0}\@pfstepnum{6}{} .
- {\QED}\@s{4.1} {\BY}\@pfstepnum{6}{1} ,\,\@pfstepnum{6}{2}
- ,\,\@pfstepnum{6}{3}\ }%
- \@x{\makebox[0pt][r]{\scriptsize 369\hspace{1em}}\@s{32.8}\@pfstepnum{5}{} .
- {\QED}\@s{4.1} {\BY}\@pfstepnum{5}{0} ,\,\@pfstepnum{5}{1}
- ,\,\@pfstepnum{5}{2}\ }%
- \@x{\makebox[0pt][r]{\scriptsize
- 370\hspace{1em}}\@s{24.59}\@pfstepnum{4}{11.}\  SafeAt ( mm . val ,\, mm .
- bal ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 371\hspace{1em}}\@s{32.8}
- {\BY}\@pfstepnum{4}{10} ,\,\@pfstepnum{2}{1} ,\, SafeAtStable}%
- \@x{\makebox[0pt][r]{\scriptsize 372\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 372\hspace{1em}}\@s{41.0}\@pfstepnum{6}{} .
  {\QED}}%
-\@x{\makebox[0pt][r]{\scriptsize 373\hspace{1em}}}%
-\@y{\@s{17.5}%
+ \@x{\makebox[0pt][r]{\scriptsize 373\hspace{1em}}\@s{49.2}
+ {\BY}\@pfstepnum{6}{1} ,\,\@pfstepnum{6}{2} ,\,\@pfstepnum{6}{3}\ }%
+ \@x{\makebox[0pt][r]{\scriptsize 374\hspace{1em}}\@s{32.8}\@pfstepnum{5}{} .
+ {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 375\hspace{1em}}\@s{41.0}
+ {\BY}\@pfstepnum{5}{0} ,\,\@pfstepnum{5}{1} ,\,\@pfstepnum{5}{2}\ }%
+ \@x{\makebox[0pt][r]{\scriptsize
+ 376\hspace{1em}}\@s{24.59}\@pfstepnum{4}{11.}\  SafeAt ( mm . val ,\, mm .
+ bal ) \.{'}}%
+ \@x{\makebox[0pt][r]{\scriptsize 377\hspace{1em}}\@s{32.8}
+ {\BY}\@pfstepnum{4}{10} ,\,\@pfstepnum{2}{1} ,\, SafeAtStable}%
+ \@x{\makebox[0pt][r]{\scriptsize 378\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ {\QED}}%
+\@y{\@s{0}%
  This proof used to work.
 }%
 \@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 374\hspace{1em}}\@s{36.89}
+ \@x{\makebox[0pt][r]{\scriptsize 379\hspace{1em}}\@s{37.37}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{4}{1a} ,\,\@pfstepnum{4}{3}
  ,\,\@pfstepnum{4}{4} ,\,\@pfstepnum{4}{6} ,\,\@pfstepnum{4}{11} ,\,
  SafeAtStable ,\, Zenon}%
- \@x{\makebox[0pt][r]{\scriptsize 375\hspace{1em}}\@s{45.1} {\DEF} MsgInv ,\,
- TypeOK ,\, Messages}%
-\@x{\makebox[0pt][r]{\scriptsize 376\hspace{1em}}}%
-\@y{\@s{17.5}%
+ \@x{\makebox[0pt][r]{\scriptsize 380\hspace{1em}}\@s{37.37} {\DEFS} MsgInv
+ ,\, TypeOK ,\, Messages}%
+\@x{\makebox[0pt][r]{\scriptsize 381\hspace{1em}}\@s{37.37}}%
+\@y{\@s{0}%
  The following decomposition added by \ensuremath{LL} on 21 \ensuremath{Nov}
  2014 because
 }%
 \@xx{}%
-\@x{\makebox[0pt][r]{\scriptsize 377\hspace{1em}}}%
-\@y{\@s{17.5}%
+\@x{\makebox[0pt][r]{\scriptsize 382\hspace{1em}}\@s{37.37}}%
+\@y{\@s{0}%
  \ensuremath{Zenon} failed on this proof. However, \ensuremath{ZenonT(200)}
  worked.
 }%
 \@xx{}%
-\begin{lcom}{17.5}%
-\begin{cpar}{0}{T}{F}{2.5}{0}{}%
+\begin{lcom}{20.0}%
+\begin{cpar}{0}{F}{F}{0}{0}{}%
  \ensuremath{\@pfstepnum{5}{}} \ensuremath{{\SUFFICES}} \ensuremath{{\ASSUME}}
  \ensuremath{{\NEW}} \ensuremath{m \.{\in} msgs\.{'}
 }%
@@ -1821,16 +1843,15 @@ The following lemma shows that (the invariant implies that) the
 \ensuremath{{\PROVE}} \ensuremath{MsgInv{\bang}(m)\.{'}
 }%
 \end{cpar}%
-\begin{cpar}{1}{T}{F}{2.5}{0}{}%
+\begin{cpar}{1}{T}{F}{5.0}{0}{}%
 \ensuremath{{\BY}} \ensuremath{{\DEF}} \ensuremath{MsgInv
 }%
 \end{cpar}%
-\vshade{5.0}%
-\begin{cpar}{2}{F}{F}{0}{0}{}%
+\begin{cpar}{1}{F}{F}{0}{0}{}%
 \ensuremath{\@pfstepnum{5}{1.}} \ensuremath{m.type \.{=} \@w{1b}
 }%
 \end{cpar}%
-\begin{cpar}{0}{T}{F}{17.5}{0}{}%
+\begin{cpar}{0}{T}{F}{15.0}{0}{}%
 \ensuremath{\.{\implies}} (\ensuremath{\.{\land} m.bal \.{\leq} maxBal[m.acc]
 }%
 \end{cpar}%
@@ -1863,22 +1884,20 @@ The following lemma shows that (the invariant implies that) the
  v\_1,\, c)))\.{'}
 }%
 \end{cpar}%
-\begin{cpar}{3}{T}{F}{5.0}{5.0}{}%
+\begin{cpar}{3}{T}{F}{5.0}{0}{}%
  \ensuremath{{\BY}} \ensuremath{\@pfstepnum{2}{1}},
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
  \ensuremath{\@pfstepnum{4}{11}}, \ensuremath{SafeAtStable
- \.{\,\backslash\,}\.{*},\, Zenon
- } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
+ } \ensuremath{{\DEFS}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
 \end{cpar}%
-\vshade{5.0}%
 \begin{cpar}{1}{F}{F}{0}{0}{}%
 \ensuremath{\@pfstepnum{5}{2.}} \ensuremath{m.type \.{=} \@w{2a}
 }%
 \end{cpar}%
-\begin{cpar}{0}{T}{F}{17.5}{0}{}%
+\begin{cpar}{0}{T}{F}{15.0}{0}{}%
 \ensuremath{\.{\implies}} (\ensuremath{\.{\land} SafeAt(m.val,\, m.bal)
 }%
 \end{cpar}%
@@ -1890,22 +1909,20 @@ The following lemma shows that (the invariant implies that) the
  ma \.{=} m)\.{'}
 }%
 \end{cpar}%
-\begin{cpar}{3}{T}{F}{5.0}{5.0}{}%
+\begin{cpar}{3}{T}{F}{5.0}{0}{}%
  \ensuremath{{\BY}} \ensuremath{\@pfstepnum{2}{1}},
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
  \ensuremath{\@pfstepnum{4}{11}}, \ensuremath{SafeAtStable
- \.{\,\backslash\,}\.{*},\, Zenon
- } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
+ } \ensuremath{{\DEFS}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
 \end{cpar}%
-\vshade{5.0}%
 \begin{cpar}{1}{F}{F}{0}{0}{}%
 \ensuremath{\@pfstepnum{5}{3.}} \ensuremath{m.type \.{=} \@w{2b}
 }%
 \end{cpar}%
-\begin{cpar}{0}{T}{F}{17.5}{0}{}%
+\begin{cpar}{0}{T}{F}{15.0}{0}{}%
 \ensuremath{\.{\implies}} (\ensuremath{\.{\land} \E\, ma \.{\in} msgs} :
 \end{cpar}%
 \begin{cpar}{0}{T}{F}{25.0}{0}{}%
@@ -1924,17 +1941,15 @@ The following lemma shows that (the invariant implies that) the
 \ensuremath{\.{\land} m.bal \.{\leq} maxVBal[m.acc])\.{'}
 }%
 \end{cpar}%
-\begin{cpar}{2}{T}{F}{5.0}{5.0}{}%
+\begin{cpar}{2}{T}{F}{5.0}{0}{}%
  \ensuremath{{\BY}} \ensuremath{\@pfstepnum{2}{1}},
  \ensuremath{\@pfstepnum{4}{1a}}, \ensuremath{\@pfstepnum{4}{3}},
  \ensuremath{\@pfstepnum{4}{4}}, \ensuremath{\@pfstepnum{4}{6}},
- \ensuremath{\@pfstepnum{4}{11}},
- \ensuremath{SafeAtStable\.{\,\backslash\,}\.{*} ,\, Zenon
- } \ensuremath{{\DEF}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
+ \ensuremath{\@pfstepnum{4}{11}}, \ensuremath{SafeAtStable
+ } \ensuremath{{\DEFS}} \ensuremath{MsgInv}, \ensuremath{TypeOK},
  \ensuremath{Messages
 }%
 \end{cpar}%
-\vshade{5.0}%
 \begin{cpar}{1}{F}{F}{0}{0}{}%
 \ensuremath{\@pfstepnum{5}{4.}} \ensuremath{{\QED}
 }%
@@ -1945,75 +1960,75 @@ The following lemma shows that (the invariant implies that) the
 }%
 \end{cpar}%
 \end{lcom}%
- \@x{\makebox[0pt][r]{\scriptsize 414\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
+ \@x{\makebox[0pt][r]{\scriptsize 415\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
  {\ASSUME} {\NEW} a \.{\in} Acceptors ,\, Phase2b ( a )}%
- \@x{\makebox[0pt][r]{\scriptsize 415\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 416\hspace{1em}}\@s{40.28} {\PROVE}\@s{4.1}
  MsgInv \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 416\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 417\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\PICK} m \.{\in} msgs \.{:} Phase2b ( a ) {\bang} ( m )}%
- \@x{\makebox[0pt][r]{\scriptsize 417\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 418\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{3}{4}\  {\DEF} Phase2b}%
  \@x{\makebox[0pt][r]{\scriptsize
- 418\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
+ 419\hspace{1em}}\@s{24.59}\@pfstepnum{4}{1.}\  \A\, aa ,\, vv ,\, bb \.{:}
  VotedForIn ( aa ,\, vv ,\, bb ) \.{\implies} VotedForIn ( aa ,\, vv ,\, bb )
  \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 419\hspace{1em}}\@s{32.8} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 420\hspace{1em}}\@s{32.8} {\BY} {\DEF}
  VotedForIn ,\, Send}%
  \@x{\makebox[0pt][r]{\scriptsize
- 420\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  \A\, mm \.{\in} msgs \.{:} mm
+ 421\hspace{1em}}\@s{24.59}\@pfstepnum{4}{2.}\  \A\, mm \.{\in} msgs \.{:} mm
  . type \.{=}\@w{1b}}%
- \@x{\makebox[0pt][r]{\scriptsize 421\hspace{1em}}\@s{55.71}
+ \@x{\makebox[0pt][r]{\scriptsize 422\hspace{1em}}\@s{55.71}
  \.{\implies}\@s{1.56} \A\, v \.{\in} Values ,\, c\@s{14.75} \.{\in} ( mm .
  maxVBal \.{+} 1 ) \.{\dotdot} ( mm . bal \.{-} 1 ) \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 422\hspace{1em}}\@s{80.05} {\lnot}
+ \@x{\makebox[0pt][r]{\scriptsize 423\hspace{1em}}\@s{80.05} {\lnot}
  VotedForIn ( mm . acc ,\, v ,\, c ) \.{\implies} {\lnot} VotedForIn ( mm .
  acc ,\, v ,\, c ) \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 423\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
+ \@x{\makebox[0pt][r]{\scriptsize 424\hspace{1em}}\@s{32.8} {\BY} {\DEF} Send
  ,\, VotedForIn ,\, MsgInv ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 424\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 425\hspace{1em}}\@s{24.59}\@pfstepnum{4}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 425\hspace{1em}}\@s{32.8}
+ \@x{\makebox[0pt][r]{\scriptsize 426\hspace{1em}}\@s{32.8}
  {\BY}\@pfstepnum{4}{1} ,\,\@pfstepnum{4}{2} ,\, SafeAtStable
  ,\,\@pfstepnum{2}{1}\  {\DEF} MsgInv ,\, Send ,\, TypeOK ,\, Messages}%
- \@x{\makebox[0pt][r]{\scriptsize 426\hspace{1em}}\@s{16.4}\@pfstepnum{3}{5.}\
+ \@x{\makebox[0pt][r]{\scriptsize 427\hspace{1em}}\@s{16.4}\@pfstepnum{3}{5.}\
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 427\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 428\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{3}{2} ,\,\@pfstepnum{3}{3}
  ,\,\@pfstepnum{3}{4}\  {\DEF} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 428\hspace{1em}}\@s{8.2}\@pfstepnum{2}{4.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 429\hspace{1em}}\@s{8.2}\@pfstepnum{2}{4.}\ 
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 429\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 430\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2} ,\,\@pfstepnum{2}{3}\  {\DEF}
  Inv}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 431\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 432\hspace{1em}}\@s{8.2}
+\@x{\makebox[0pt][r]{\scriptsize 432\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 433\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2} ,\, PTL {\DEF} Spec}%
 \@pvspace{16.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 435\hspace{1em}} {\THEOREM} Consistent
+ \@x{\makebox[0pt][r]{\scriptsize 436\hspace{1em}} {\THEOREM} Consistent
  \.{\defeq} Spec \.{\implies} {\Box} Consistency}%
- \@x{\makebox[0pt][r]{\scriptsize 436\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
+ \@x{\makebox[0pt][r]{\scriptsize 437\hspace{1em}}\@pfstepnum{1}{}\  {\USE}
  {\DEF} Ballots}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 438\hspace{1em}}\@pfstepnum{1}{1.}\  Inv
+ \@x{\makebox[0pt][r]{\scriptsize 439\hspace{1em}}\@pfstepnum{1}{1.}\  Inv
  \.{\implies} Consistency}%
- \@x{\makebox[0pt][r]{\scriptsize 439\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 440\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
  {\SUFFICES} {\ASSUME} Inv ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 440\hspace{1em}}\@s{106.84} {\NEW} v1
+ \@x{\makebox[0pt][r]{\scriptsize 441\hspace{1em}}\@s{106.84} {\NEW} v1
  \.{\in} Values ,\,\@s{4.1} {\NEW} v2 \.{\in} Values ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 441\hspace{1em}}\@s{106.84} {\NEW}
+ \@x{\makebox[0pt][r]{\scriptsize 442\hspace{1em}}\@s{106.84} {\NEW}
  b1\@s{0.44} \.{\in} Ballots ,\, {\NEW} b2\@s{2.63} \.{\in} Ballots ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 442\hspace{1em}}\@s{106.84} ChosenIn ( v1
+ \@x{\makebox[0pt][r]{\scriptsize 443\hspace{1em}}\@s{106.84} ChosenIn ( v1
  ,\, b1 ) ,\, ChosenIn ( v2 ,\, b2 ) ,\,}%
- \@x{\makebox[0pt][r]{\scriptsize 443\hspace{1em}}\@s{106.84} b1\@s{0.44}
+ \@x{\makebox[0pt][r]{\scriptsize 444\hspace{1em}}\@s{106.84} b1\@s{0.44}
  \.{\leq} b2}%
- \@x{\makebox[0pt][r]{\scriptsize 444\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 445\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
  v1 \.{=} v2}%
- \@x{\makebox[0pt][r]{\scriptsize 445\hspace{1em}}\@s{16.4} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 446\hspace{1em}}\@s{16.4} {\BY} {\DEF}
  Consistency ,\, Chosen}%
- \@x{\makebox[0pt][r]{\scriptsize 446\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}
+ \@x{\makebox[0pt][r]{\scriptsize 447\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}
  {\CASE} b1 \.{=} b2}%
- \@x{\makebox[0pt][r]{\scriptsize 447\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 448\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\, VotedOnce ,\, QuorumAssumption ,\, SMTT ( 100 )
  {\DEF} ChosenIn ,\, Inv}%
 \begin{lcom}{10.0}%
@@ -2045,139 +2060,139 @@ The following lemma shows that (the invariant implies that) the
 }%
 \end{cpar}%
 \end{lcom}%
- \@x{\makebox[0pt][r]{\scriptsize 456\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}
+ \@x{\makebox[0pt][r]{\scriptsize 457\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}
  {\CASE} b1 \.{<} b2}%
- \@x{\makebox[0pt][r]{\scriptsize 457\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
+ \@x{\makebox[0pt][r]{\scriptsize 458\hspace{1em}}\@s{16.4}\@pfstepnum{3}{1.}\
  SafeAt ( v2 ,\, b2 )}%
- \@x{\makebox[0pt][r]{\scriptsize 458\hspace{1em}}\@s{24.59} {\BY} VotedInv
+ \@x{\makebox[0pt][r]{\scriptsize 459\hspace{1em}}\@s{24.59} {\BY} VotedInv
  ,\, QuorumNonEmpty ,\, QuorumAssumption {\DEF} ChosenIn ,\, Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 459\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
+ \@x{\makebox[0pt][r]{\scriptsize 460\hspace{1em}}\@s{16.4}\@pfstepnum{3}{2.}\
  {\PICK} Q2 \.{\in} Quorums \.{:}}%
- \@x{\makebox[0pt][r]{\scriptsize 460\hspace{1em}}\@s{78.54} \A\, a \.{\in}
+ \@x{\makebox[0pt][r]{\scriptsize 461\hspace{1em}}\@s{78.54} \A\, a \.{\in}
  Q2\@s{14.10} \.{:} VotedForIn ( a ,\, v2 ,\, b1 ) \.{\lor} WontVoteIn ( a
  ,\, b1 )}%
- \@x{\makebox[0pt][r]{\scriptsize 461\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 462\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{1} ,\,\@pfstepnum{2}{2}\  {\DEF} SafeAt}%
- \@x{\makebox[0pt][r]{\scriptsize 462\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
+ \@x{\makebox[0pt][r]{\scriptsize 463\hspace{1em}}\@s{16.4}\@pfstepnum{3}{3.}\
  {\PICK} Q1 \.{\in} Quorums \.{:} \A\, a \.{\in} Q1 \.{:} VotedForIn ( a ,\,
  v1 ,\, b1 )}%
- \@x{\makebox[0pt][r]{\scriptsize 463\hspace{1em}}\@s{24.59} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 464\hspace{1em}}\@s{24.59} {\BY} {\DEF}
  ChosenIn}%
- \@x{\makebox[0pt][r]{\scriptsize 464\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
+ \@x{\makebox[0pt][r]{\scriptsize 465\hspace{1em}}\@s{16.4}\@pfstepnum{3}{4.}\
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 465\hspace{1em}}\@s{24.59}
+ \@x{\makebox[0pt][r]{\scriptsize 466\hspace{1em}}\@s{24.59}
  {\BY}\@pfstepnum{3}{2} ,\,\@pfstepnum{3}{3} ,\, QuorumAssumption ,\,
  VotedOnce ,\, Z3 {\DEF} WontVoteIn ,\, Inv}%
- \@x{\makebox[0pt][r]{\scriptsize 466\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 467\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 467\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 468\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2}\ }%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 469\hspace{1em}}\@pfstepnum{1}{2.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 470\hspace{1em}}\@s{8.2} {\BY} Invariant
+\@x{\makebox[0pt][r]{\scriptsize 470\hspace{1em}}\@pfstepnum{1}{2.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 471\hspace{1em}}\@s{8.2} {\BY} Invariant
  ,\,\@pfstepnum{1}{1} ,\, PTL}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 472\hspace{1em}}}\midbar\@xx{}%
- \@x{\makebox[0pt][r]{\scriptsize 473\hspace{1em}} chosenBar \.{\defeq} \{ v
+\@x{\makebox[0pt][r]{\scriptsize 473\hspace{1em}}}\midbar\@xx{}%
+ \@x{\makebox[0pt][r]{\scriptsize 474\hspace{1em}} chosenBar \.{\defeq} \{ v
  \.{\in} Values \.{:} Chosen ( v ) \}}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 475\hspace{1em}} C \.{\defeq} {\INSTANCE}
+ \@x{\makebox[0pt][r]{\scriptsize 476\hspace{1em}} C \.{\defeq} {\INSTANCE}
  Consensus {\WITH} chosen \.{\leftarrow} chosenBar}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 477\hspace{1em}} {\THEOREM} Refinement
+ \@x{\makebox[0pt][r]{\scriptsize 478\hspace{1em}} {\THEOREM} Refinement
  \.{\defeq} Spec \.{\implies} C {\bang} Spec}%
- \@x{\makebox[0pt][r]{\scriptsize 478\hspace{1em}}\@pfstepnum{1}{1.}\  Init
+ \@x{\makebox[0pt][r]{\scriptsize 479\hspace{1em}}\@pfstepnum{1}{1.}\  Init
  \.{\implies} C {\bang} Init}%
- \@x{\makebox[0pt][r]{\scriptsize 479\hspace{1em}}\@s{8.2} {\BY}
+ \@x{\makebox[0pt][r]{\scriptsize 480\hspace{1em}}\@s{8.2} {\BY}
  QuorumNonEmpty {\DEF} Init ,\, C {\bang} Init ,\, chosenBar ,\, Chosen ,\,
  ChosenIn ,\, VotedForIn}%
 \@pvspace{8.0pt}%
- \@x{\makebox[0pt][r]{\scriptsize 481\hspace{1em}}\@pfstepnum{1}{2.}\  TypeOK
+ \@x{\makebox[0pt][r]{\scriptsize 482\hspace{1em}}\@pfstepnum{1}{2.}\  TypeOK
  \.{'} \.{\land} Consistency \.{'} \.{\land} [ Next ]_{ vars} \.{\implies} [
  C {\bang} Next ]_{ chosenBar}}%
- \@x{\makebox[0pt][r]{\scriptsize 482\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 483\hspace{1em}}\@s{8.2}\@pfstepnum{2}{}\ 
  {\SUFFICES} {\ASSUME} TypeOK \.{'} ,\, Consistency \.{'} ,\, Next ,\,
  chosenBar \.{'} \.{\neq} chosenBar}%
- \@x{\makebox[0pt][r]{\scriptsize 483\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
+ \@x{\makebox[0pt][r]{\scriptsize 484\hspace{1em}}\@s{68.59} {\PROVE}\@s{4.1}
  C {\bang} Next}%
- \@x{\makebox[0pt][r]{\scriptsize 484\hspace{1em}}\@s{16.4} {\BY} {\DEF} vars
+ \@x{\makebox[0pt][r]{\scriptsize 485\hspace{1em}}\@s{16.4} {\BY} {\DEF} vars
  ,\, chosenBar ,\, Chosen ,\, ChosenIn ,\, VotedForIn}%
- \@x{\makebox[0pt][r]{\scriptsize 485\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 486\hspace{1em}}\@s{8.2}\@pfstepnum{2}{1.}\ 
  chosenBar \.{\subseteq} chosenBar \.{'}}%
- \@x{\makebox[0pt][r]{\scriptsize 486\hspace{1em}}\@s{16.4} {\BY} {\DEF} Send
+ \@x{\makebox[0pt][r]{\scriptsize 487\hspace{1em}}\@s{16.4} {\BY} {\DEF} Send
  ,\, chosenBar ,\, Chosen ,\, ChosenIn ,\, VotedForIn ,\, Next ,\, Phase1a
  ,\, Phase1b ,\, Phase2a ,\, Phase2b}%
- \@x{\makebox[0pt][r]{\scriptsize 487\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 488\hspace{1em}}\@s{8.2}\@pfstepnum{2}{2.}\ 
  \A\, v ,\, w \.{\in} chosenBar \.{'} \.{:} v \.{=} w}%
- \@x{\makebox[0pt][r]{\scriptsize 488\hspace{1em}}\@s{16.4} {\BY} {\DEF}
+ \@x{\makebox[0pt][r]{\scriptsize 489\hspace{1em}}\@s{16.4} {\BY} {\DEF}
  Consistency ,\, chosenBar ,\, ChosenIn ,\, TypeOK}%
- \@x{\makebox[0pt][r]{\scriptsize 489\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
+ \@x{\makebox[0pt][r]{\scriptsize 490\hspace{1em}}\@s{8.2}\@pfstepnum{2}{3.}\ 
  chosenBar \.{=} \{ \}}%
- \@x{\makebox[0pt][r]{\scriptsize 490\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 491\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2} ,\, SetExtensionality}%
- \@x{\makebox[0pt][r]{\scriptsize 491\hspace{1em}}\@s{8.2}\@pfstepnum{2}{} .
+ \@x{\makebox[0pt][r]{\scriptsize 492\hspace{1em}}\@s{8.2}\@pfstepnum{2}{} .
  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 492\hspace{1em}}\@s{16.4}
+ \@x{\makebox[0pt][r]{\scriptsize 493\hspace{1em}}\@s{16.4}
  {\BY}\@pfstepnum{2}{1} ,\,\@pfstepnum{2}{2} ,\,\@pfstepnum{2}{3}\  {\DEF} C
  {\bang} Next ,\, chosenBar}%
 \@pvspace{8.0pt}%
-\@x{\makebox[0pt][r]{\scriptsize 494\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
- \@x{\makebox[0pt][r]{\scriptsize 495\hspace{1em}}\@s{8.2}
+\@x{\makebox[0pt][r]{\scriptsize 495\hspace{1em}}\@pfstepnum{1}{3.}\  {\QED}}%
+ \@x{\makebox[0pt][r]{\scriptsize 496\hspace{1em}}\@s{8.2}
  {\BY}\@pfstepnum{1}{1} ,\,\@pfstepnum{1}{2} ,\, Invariant ,\, Consistent ,\,
  PTL {\DEF} Spec ,\, C {\bang} Spec ,\, Inv}%
-\@x{\makebox[0pt][r]{\scriptsize 496\hspace{1em}}}\bottombar\@xx{}%
+\@x{\makebox[0pt][r]{\scriptsize 497\hspace{1em}}}\bottombar\@xx{}%
 \setboolean{shading}{false}
 \begin{lcom}{0}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
-\ensuremath{\.{\,\backslash\,}\.{*}} Modification History
+\ensuremath{\.{\,\backslash\,}}* Modification History
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
- \ensuremath{Jul} 30 21:29:49 \ensuremath{CST} 2019 by \ensuremath{hengxin
+ \ensuremath{\.{\,\backslash\,}}* Last modified Sun \ensuremath{Aug} 04
+ 10:59:26 \ensuremath{CST} 2019 by \ensuremath{hengxin
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Mon}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Mon}
  \ensuremath{Jul} 22 20:30:39 \ensuremath{CST} 2019 by \ensuremath{hengxin
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Fri}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Fri}
  \ensuremath{Nov} 28 10:39:17 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sun \ensuremath{Nov} 23
+ \ensuremath{\.{\,\backslash\,}}* Last modified Sun \ensuremath{Nov} 23
  14:45:09 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Mon}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Mon}
  \ensuremath{Nov} 24 02:03:02 \ensuremath{CET} 2014 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat \ensuremath{Nov} 22
+ \ensuremath{\.{\,\backslash\,}}* Last modified Sat \ensuremath{Nov} 22
  12:04:19 \ensuremath{CET} 2014 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Fri}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Fri}
  \ensuremath{Nov} 21 17:40:41 \ensuremath{PST} 2014 by \ensuremath{lamport
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified \ensuremath{Tue}
+ \ensuremath{\.{\,\backslash\,}}* Last modified \ensuremath{Tue}
  \ensuremath{Mar} 18 11:37:57 \ensuremath{CET} 2014 by \ensuremath{doligez
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Last modified Sat \ensuremath{Nov} 24
+ \ensuremath{\.{\,\backslash\,}}* Last modified Sat \ensuremath{Nov} 24
  18:53:09 \ensuremath{GMT\.{-}03}:00 2012 by \ensuremath{merz
 }%
 \end{cpar}%
 \begin{cpar}{0}{F}{F}{0}{0}{}%
- \ensuremath{\.{\,\backslash\,}\.{*}} Created Sat \ensuremath{Nov} 17 16:02:06
+ \ensuremath{\.{\,\backslash\,}}* Created Sat \ensuremath{Nov} 17 16:02:06
  \ensuremath{PST} 2012 by \ensuremath{lamport
 }%
 \end{cpar}%

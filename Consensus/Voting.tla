@@ -122,6 +122,11 @@ THEOREM ShowsSafety ==
   BY QuorumAssumption, Z3
   DEFS Ballot, TypeOK, VotesSafe, OneValuePerBallot, SafeAt, 
     ShowsSafeAt, CannotVoteAt, NoneOtherChoosableAt, DidNotVoteAt
+    
+THEOREM SafeAtStable == Inv /\ Next /\ TypeOK' =>
+                            \A b \in Ballot, v \in Value :
+                                SafeAt(b, v) => SafeAt(b, v)'
+  OMITTED                                
 -----------------------------------------------------------------------------
 THEOREM Invariance == Spec => []Inv
 <1> USE DEF Inv
@@ -174,12 +179,23 @@ THEOREM Invariance == Spec => []Inv
         BY <3>2 DEF VoteFor
       <4>1. TypeOK'
         BY <3>2 DEF TypeOK, VoteFor
-      <4>2. VotesSafe' \* Using OneValuePerBallot?
-        (*
-        BY <3>2, ShowsSafety, QuorumAssumption
-        DEFS Ballot, VoteFor, VotesSafe, SafeAt, ShowsSafeAt, CannotVoteAt,
-             NoneOtherChoosableAt, DidNotVoteAt, VotedFor, OneValuePerBallot
-        *)
+      <4>2. VotesSafe' \* Using OneValuePerBallot in SafeAtStable
+        <5> SUFFICES ASSUME NEW aa \in Acceptor', NEW bb \in Ballot', NEW vv \in Value',
+                            VotedFor(aa, bb, vv)'
+                     PROVE  SafeAt(bb, vv)'
+          BY DEF VotesSafe
+        <5>1. CASE VotedFor(aa, bb, vv)
+          <6>1. SafeAt(bb, vv)
+            BY <5>1 DEF VotesSafe
+          <6> QED
+            BY <4>1, <6>1, SafeAtStable DEF Next
+        <5>2. CASE ~VotedFor(aa, bb, vv)
+          <6>1. aa = a /\ bb = b /\ vv = v /\ VotedFor(a, b, v)'
+            BY <3>2, <4>1, <5>2 DEF VoteFor, VotedFor, TypeOK
+          <6> QED
+            BY <4>1, <6>1, ShowsSafety, SafeAtStable DEF VoteFor, Next
+        <5> QED
+          BY <5>1, <5>2
       <4>3. OneValuePerBallot'
         BY <3>2 DEF VoteFor, OneValuePerBallot, VotedFor, TypeOK
       <4>4. QED
