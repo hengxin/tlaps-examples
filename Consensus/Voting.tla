@@ -56,6 +56,8 @@ ChosenAt(b, v) ==
     \E Q \in Quorum : \A a \in Q : VotedFor(a, b, v)
 
 chosen == {v \in Value : \E b \in Ballot : ChosenAt(b, v)}
+
+Consistency == chosen = {} \/ \E v \in Value : chosen = {v} \* Cardinality(chosen) <= 1
 ---------------------------------------------------------------------------
 CannotVoteAt(a, b) == 
     /\ maxBal[a] > b
@@ -128,7 +130,7 @@ THEOREM SafeAtStable == Inv /\ Next /\ TypeOK' =>
                                 SafeAt(b, v) => SafeAt(b, v)'
   OMITTED                                
 -----------------------------------------------------------------------------
-THEOREM Invariance == Spec => []Inv
+THEOREM Invariant == Spec => []Inv
 <1> USE DEF Inv
 <1>1. Init => Inv
   BY DEF Init, TypeOK, VotesSafe, OneValuePerBallot, VotedFor 
@@ -212,30 +214,31 @@ THEOREM Invariance == Spec => []Inv
 <1>3. QED
   BY <1>1, <1>2, PTL DEF Spec
 ----------------------------------------------------------------------------
-C == INSTANCE Consensus
+THEOREM Consistent == Spec => []Consistency
+  OMITTED
+----------------------------------------------------------------------------
+C == INSTANCE Consensus \* WITH chosen <- chosen
 
-THEOREM Spec /\ Inv => C!Spec
+THEOREM Refinement == Spec => C!Spec
 <1>1. Init => C!Init
   BY QuorumAssumption, SetExtensionality, IsaM("force")
   DEF Init, C!Init, chosen, ChosenAt, VotedFor
-<1>2. Next /\ Inv => C!Next \/ UNCHANGED chosen
-  <2>1 SUFFICES ASSUME Next, Inv PROVE C!Next \/ UNCHANGED chosen 
-    BY <2>1
-  <2>2. chosen \subseteq chosen'
-    BY <2>1, QuorumAssumption, Z3   \* SMTT(10) fails
-    DEF Next, Inv, TypeOK, IncreaseMaxBal, chosen, ChosenAt, VotedFor, Ballot, VoteFor
-  <2>3. chosen' = {} \/ \E v \in Value : chosen' = {v}
-    <3>1. PICK a \in Acceptor, b \in Ballot :
-             \/ IncreaseMaxBal(a, b)
-             \/ \E v \in Value : VoteFor(a, b, v)
-      BY <2>1 DEF Next
-    <3>2. CASE IncreaseMaxBal(a, b)
-    <3>3. CASE \E v \in Value : VoteFor(a, b, v)
-    <3>q. QED
-      BY <3>1, <3>2, <3>3, SMT
-  <2>q. QED
-    BY <2>1, <2>2, <2>3, OneVoteThm, VotesSafeImpliesConsistency, SetExtensionality, SMT
-    DEF Inv, C!Next
+<1>2. TypeOK' /\ Consistency' /\ [Next]_<<votes, maxBal>> => [C!Next]_chosen
+  <2>1. UNCHANGED <<votes, maxBal>> => UNCHANGED chosen
+    BY DEF chosen, ChosenAt, VotedFor
+  <2>2. TypeOK' /\ Consistency' /\ Next => C!Next \/ UNCHANGED chosen
+    <3>1. SUFFICES ASSUME TypeOK', Consistency', Next
+                   PROVE  C!Next \/ UNCHANGED chosen
+      OBVIOUS
+    <3>2. chosen \subseteq chosen' 
+      BY <3>1, QuorumAssumption, Z3
+      DEFS Next, IncreaseMaxBal, VoteFor, Inv, TypeOK, chosen, ChosenAt, VotedFor, Ballot
+    <3>3. chosen' = {} \/ \E v \in Value : chosen' = {v} 
+      BY <3>1 DEF Consistency
+    <3>4. QED
+      BY <3>1, <3>2, <3>3 DEF C!Next
+  <2>3. QED
+    BY <2>1, <2>2
 <1>3. QED
-  PROOF OMITTED
+  BY <1>1, <1>2, Invariant, Consistent, PTL DEF Spec, Inv, C!Spec
 =============================================================================

@@ -105,7 +105,7 @@ THEOREM Spec => []AtLeastOneYWhenDone
     <3>2. CASE (\A self \in ProcSet: pc[self] = "Done") /\ UNCHANGED vars
         BY <3>2 DEF TypeOK, vars, AtLeastOneYWhenDone
     <3>3. QED
-      BY <2>1, <3>1, <3>2 DEF Next
+      BY <2>1, <3>1, <3>2 DEF Next, Terminating
   <2>2. CASE UNCHANGED vars
     BY <2>2 DEF TypeOK, vars, AtLeastOneYWhenDone
   <2>3. QED
@@ -116,5 +116,5 @@ THEOREM Spec => []AtLeastOneYWhenDone
     BY <1>1, <1>2, <1>3, PTL DEF Spec
 =============================================================================
 \* Modification History
-\* Last modified Fri Aug 02 14:30:22 CST 2019 by hengxin
+\* Last modified Wed Aug 07 17:32:20 CST 2019 by hengxin
 \* Created Fri Aug 02 13:28:48 CST 2019 by hengxin
