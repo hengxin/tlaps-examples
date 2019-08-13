@@ -215,7 +215,15 @@ THEOREM Invariant == Spec => []Inv
   BY <1>1, <1>2, PTL DEF Spec
 ----------------------------------------------------------------------------
 THEOREM Consistent == Spec => []Consistency
-  OMITTED
+<1> USE DEF Ballot
+<1>1. Inv => Consistency
+  <2> SUFFICES ASSUME Inv
+               PROVE  Consistency
+    OBVIOUS
+  <2> QED
+    BY VotesSafeImpliesConsistency, OneVoteThm DEF Inv, Consistency
+<1>2. QED
+  BY Invariant, <1>1, PTL
 ----------------------------------------------------------------------------
 C == INSTANCE Consensus \* WITH chosen <- chosen
 
