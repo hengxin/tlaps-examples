@@ -26,6 +26,11 @@
 			<location>/usr/local/lib/tlaps/FiniteSets.tla</location>
 		</link>
 		<link>
+			<name>NaturalsInduction.tla</name>
+			<type>1</type>
+			<location>/usr/local/lib/tlaps/NaturalsInduction.tla</location>
+		</link>
+		<link>
 			<name>Paxos.tla</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Paxos.tla</locationURI>

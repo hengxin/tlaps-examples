@@ -38,22 +38,21 @@ THEOREM Spec => SV!Spec
     <2>1. UNCHANGED state => UNCHANGED maxBal
       BY DEF maxBal
     <2>2. Next => SV!Next
-      <3> ASSUME NEW p \in Participant, NEW b \in Nat,
-                 Prepare(p, b)
-          PROVE  SV!IncreaseMaxBal(p, b) \* SV!Next
-        <4>1. maxBal[p] < b \* Wrong decomposition: maxBal[p] SV!< b
-          BY DEF Prepare, maxBal
-        <4>2. maxBal' = [maxBal EXCEPT ![p] = b]
-          BY DEF Prepare, maxBal
-        <4>3. QED
-          BY <4>1, <4>2 DEF SV!IncreaseMaxBal
-      <3>1. QED
+      <3> SUFFICES ASSUME NEW p \in Participant, NEW b \in Nat,
+                          Prepare(p, b)
+                   PROVE  SV!IncreaseMaxBal(p, b)
         BY DEF Next, SV!Next
+      <3>1. maxBal[p] < b
+        BY DEF Prepare, maxBal
+      <3>2. maxBal' = [maxBal EXCEPT ![p] = b] \* failed here!
+        BY DEF Prepare, maxBal
+      <3>3. QED
+        BY <3>1, <3>2 DEF SV!IncreaseMaxBal
     <2>3. QED
       BY <2>1, <2>2
   <1>3. QED
     BY <1>1, <1>2, PTL DEF SV!Spec, Spec
 =============================================================================
 \* Modification History
-\* Last modified Thu Aug 15 11:51:11 CST 2019 by hengxin
+\* Last modified Sat Aug 17 14:43:49 CST 2019 by hengxin
 \* Created Thu Aug 15 10:52:49 CST 2019 by hengxin
