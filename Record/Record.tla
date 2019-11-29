@@ -1,4 +1,10 @@
 ------------------------------- MODULE Record -------------------------------
+(*
+It is necessary to use type invariant when reasoning about EXCEPT expressions.
+See step <4>2 in the proof for Spec => SV!Spec.
+
+See https://groups.google.com/d/msg/tlaplus/rmmH9vFwH_0/rY18YWMGDQAJ.
+*)
 EXTENDS Naturals, TLAPS
 ---------------------------------------------------------------------------
 CONSTANTS Participant  \* the set of partipants
@@ -34,25 +40,26 @@ THEOREM Invariant == Spec => []TypeOK
 THEOREM Spec => SV!Spec
   <1>1. Init => SV!Init
     BY DEF Init, SV!Init, maxBal, InitState
-  <1>2. [Next]_state => [SV!Next]_maxBal
+  <1>2. TypeOK /\ [Next]_state => [SV!Next]_maxBal
     <2>1. UNCHANGED state => UNCHANGED maxBal
       BY DEF maxBal
-    <2>2. Next => SV!Next
+    <2>2. TypeOK /\ Next => SV!Next
       <3> SUFFICES ASSUME NEW p \in Participant, NEW b \in Nat,
+                          TypeOK,
                           Prepare(p, b)
                    PROVE  SV!IncreaseMaxBal(p, b)
         BY DEF Next, SV!Next
       <3>1. maxBal[p] < b
         BY DEF Prepare, maxBal
-      <3>2. maxBal' = [maxBal EXCEPT ![p] = b] \* failed here!
-        BY DEF Prepare, maxBal
+      <3>2. maxBal' = [maxBal EXCEPT ![p] = b]
+        BY DEF Prepare, maxBal, TypeOK, State
       <3>3. QED
         BY <3>1, <3>2 DEF SV!IncreaseMaxBal
     <2>3. QED
       BY <2>1, <2>2
   <1>3. QED
-    BY <1>1, <1>2, PTL DEF SV!Spec, Spec
+    BY <1>1, <1>2, Invariant, PTL DEF SV!Spec, Spec
 =============================================================================
 \* Modification History
-\* Last modified Sat Aug 17 14:43:49 CST 2019 by hengxin
+\* Last modified Tue Aug 20 10:52:14 CST 2019 by hengxin
 \* Created Thu Aug 15 10:52:49 CST 2019 by hengxin
